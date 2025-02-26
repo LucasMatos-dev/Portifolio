@@ -5,21 +5,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Portifólio - Lucas de Matos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
-    <img src="./assets/images/eu.jpg" alt="Minha foto." width="300" />
+    <img src="./assets/images/eu.jpg" alt="Minha foto." />
     <h1>Meu nome é Lucas de Matos</h1>
     <h2>Sou um desenvolvedor Full Stack</h2>
+    <br />
     <p>Adoro criar <strong>sites</strong> e <strong>sistemas</strong> para a
         <i>internet</i>,<br />
-        Tenho um grande interesse em <strong>segurança da informação</strong>, <strong>automação</strong> e
+        Tenho um grande interesse em <strong>segurança da informação</strong>,<br /><strong>automação</strong> e
         <strong>experiência do usuário (UX)</strong>. <br />
-        <u>Sempre busco facilitar a vida de todos.</u>
+        <!-- <u>Sempre busco facilitar a vida de todos.</u> -->
     </p>
 
-    <h2>Lista de Projetos:</h2>
-    <ul style="list-style: circle;">
+    <br />
+
+    <article class="post">
+        <header class="header">
+            <h2>Lista de Projetos:</h2>
+            <br />
+        </header>
+        <section class="projetos">
+            <ul class="projetos" style="list-style: disc; ">
+                <li>
+                    <a href="./cafeteria/index.html">Cafeteria Essencia</a></li>
+                    <ul>Cafeteria basica feita em HTML.</ul>
+                </li>
+                <li>
+                    <a href="./vrealize-table/index.html">Site VRealize</a></li>
+                    <ul>Site feito usando tabelas em HTML.</ul>
+                </li>
+                <li>
+                    <a href="./podcast/index.html">Podcast CyberTech</a></li>
+                    <ul>Site de um podcast focado em tecnologia.
+                </li>
+            </ul>
+        </section>
+    </article>
+
+    <!-- <h2>Lista de Projetos:</h2>
+    <ul class="projetos" style="list-style: disc; ">
         <li>
             <a href="./cafeteria/index.html">Cafeteria Essencia</a></li>
             <ul>Cafeteria basica feita em HTML.</ul>
@@ -32,12 +62,15 @@
             <a href="./podcast/index.html">Podcast CyberTech</a></li>
             <ul>Site de um podcast focado em tecnologia.
         </li>
-    </ul>
+    </ul> -->
 
     <br />
-    <a href="https://www.linkedin.com/in/lucasmatos-dev/">Meu Linkedin</a>
-    <br />
-    <a href="https://github.com/LucasMatos-dev">Meu GitHub</a>
+    <a href="https://www.linkedin.com/in/lucasmatos-dev/"> 
+        <img src="./assets/images/linkedin.png" alt="Linkedin">
+    </a>
+    <a href="https://github.com/LucasMatos-dev">
+        <img src="./assets/images/github.png" alt="Github">
+    </a>
 </body>
 
 </html>
