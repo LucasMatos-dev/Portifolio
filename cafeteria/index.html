@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cafeteria Lucas</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
-    <img src="../../assets/images/cafe_essencia.png" alt="Cafe Essencia." , width="300" />
+    <img src="./assets/images/cafe_essencia.png" alt="Cafe Essencia." , width="300" />
     <h1>Bem vindo ao Cafe Essencia</h1>
     <h2>O melhor cafe da cidade!</h2>
     <h2>Horários de Funcionamento:</h2>
@@ -154,13 +155,44 @@
         </li>
     </ol>
 
+    <h1>Formulario de Contato:</h1>
+    <form>
+        <label>
+            <p>Digite o seu nome completo:</p>
+            <input type="text" name="nome" placeholder="Nome completo" required>
+        </label>
+        <br />
 
-    <a href="../../projetos/Dia4/contatoCafeteria.html">Formulario para <strong>Contato</strong></a>
-    <br /> <br />
-    <a href="../../index.html">Voltar para o <strong>Portifólio</strong></a>
+        <label>
+            <p>Digite o seu email:</p>
+            <input type="email" name="email" placeholder="Seu email" required>
+        </label>
+        <br />
+
+        <label>
+            <p>Digite seu telefone:</p>
+            <input type="tel" name="telefone" placeholder="Seu telefone">
+        </label>
+        <br />
+
+        <label>
+            <p>Digite o assunto do contato:</p>
+            <input type="text" name="Assunto" placeholder="Assunto do contato" required> 
+        </label>
+        <br />
+
+        <label>
+            <p>Escreva sua duvida:</p>
+            <textarea name="Texto" id ="texto" placeholder="Sua duvida" required></textarea>
+        </label>
+        <br />
+
+        <button type="submit">Enviar</button> <br />
+        <button type="reset">Resetar Informações</button>
+    </form>
+
     <br />
-    <a href=".././paginaProjetos.html">Voltar para a <strong>Lista de Projetos</strong></a>
-    <br />
+    <a href="../index.html">Voltar para o <strong>Portifólio</strong></a>
     
 </body>
 
