@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Inter, Arial, Arial, Helvetica, sans-serif;
+    background: linear-gradient(to bottom, #506065, #e3e8e9);
+}
+
+.card h1 {
+    font-size: 32px;
+    font-weight: 700;
+}
+.card h2 {
+    font-size: 20px;
+    font-weight: 650;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.card p {
+    font-weight: 350;
+    margin-bottom: 1rem;
+}
+
+.card {
+    background: #a5bfce;
+    border-radius: 10px;
+    max-width: 500px;   /* Largura máxima para o card */
+    width: 85%;         /* Ocupa 85% da tela, até chegar na max-width */
+    margin: 2rem auto;  /* Centraliza horizontalmente e dá espaço vertical */
+    padding: 3rem;  /* O (rem) pega o tamanho de espaçamento baseado no elemento de texto global (que esta em html. Ex: html { font-size: 16px; }). */
+    text-align: center;                /*  Ja o elemento (em) baseia seu tamanho no seu elemento pai. */
+}
+
+#fotoPerfil{
+    border-radius: 100%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    object-position: center 0px;
+    margin-top: 25px;
+    margin-bottom: 14px;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;  
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 1rem;
+}
+
+.itemLink{
+    display: inline;
+    background-color: #ffffff;
+    color: #0074b8;
+    font-weight: 650;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 50px;
+    margin: 0 20%;
+    text-decoration: none;
+}
+
+.redesSociais a img {
+    width: 50px;
+    padding: 6px;
+}
+
+.portifolioBotao {
+    position: absolute;
+    left: 1%;
+    top: 98%; 
+      
+  }
+  
+  .portifolioBotao a {
+    background-color: #fff;
+    color: #734382;
+    font-weight: 650;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 50px;
+    text-decoration: none;
+  }
+  
