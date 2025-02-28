@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Inter, Arial, Helvetica, sans-serif;
+}
+
+main {
+    padding: 132px 0 32px 200px;
+}
+
+li {
+    padding-bottom: 8px;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 650;
+    margin-bottom: 16px;
+}
+
+a {
+    color: #b35f00;
+    text-decoration: none;
+}
+
+p {
+    text-align: justify;
+    text-indent: 10px;
+    margin-block: 16px;
+}
+
+ul {
+    padding-left: 30px;
+}
+
+header#header {
+    background-color: #8f97a9;
+    color: #FFFFFF;
+    padding: 16px 32px;
+    position: fixed;
+    top: 0;
+    left: 0px;
+    right: 0;
+    height: 100px;
+}
+
+header p {
+    text-indent: 0;
+    margin: 0;
+}
+
+aside {
+    background-color: #a3acc1;
+    color: #FFFFFF;
+    padding: 16px 16px 8px;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 200px;
+    position: fixed;
+    top: 100px;
+    bottom: 0;
+}
+
+aside a {
+    color: #FFFFFF;
+}
+
+.intro {
+    width: 90%;
+    margin: 0 auto;
+    background: #dbe2e8;
+    padding: 16px;
+    margin-bottom: 32px;
+    border: 2px solid black;
+}
+
+.post {
+    width: 90%;
+    margin: 0 auto;
+    background: #ebe9e8;
+    padding: 16px;
+    margin-bottom: 32px;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+.post h2 {
+    text-align: center;
+}
+
+.post img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border: 3px solid #4d545b;
+    aspect-ratio: 16 /9;
+    object-fit: cover;
+    object-position: center 0px;
+    border-radius: 20px;
+}
+
+.portifolioBotao {
+    position: absolute;
+    left: 22%;
+    top: 94%;
+
+}
+
+.portifolioBotao a {
+    background-color: #d6dbe7;
+    color: #525252;
+    font-weight: 650;
+    font-size: 16px;
+    padding: 8px;
+    border-radius: 50px;
+    text-decoration: none;
+}
+
+.direitos p {
+    text-align: center;
+    /* margin-top: 10px; */
+}
