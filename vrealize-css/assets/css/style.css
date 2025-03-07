@@ -6,10 +6,17 @@
 
 body {
     font-family: Inter, Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    height: 100%;
+
+    display: grid;
+    grid-template-areas: 'header header' 'menu main' 'footer footer';
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 132px 1fr 60px;
 }
 
 main {
-    padding: 132px 0 32px 200px;
+    grid-area: main;
 }
 
 li {
@@ -46,6 +53,7 @@ header#header {
     left: 0px;
     right: 0;
     height: 100px;
+    grid-area: header;
 }
 
 header p {
@@ -135,9 +143,9 @@ header p {
 
 .portifolioBotao {
     position: absolute;
-    left: 22%;
-    top: 94%;
-
+    bottom: 20px; /* Ajuste conforme necessário */
+    left: 50%;
+        transform: translateX(-50%);
 }
 
 .portifolioBotao a {
@@ -150,7 +158,17 @@ header p {
     text-decoration: none;
 }
 
-.direitos p {
-    text-align: center;
-    /* margin-top: 10px; */
+footer {
+    margin-left: 200px;
+    width: calc(100% - 200px);
+    background-color: #d6dbe7;
+    color: #525252;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: footer;
+}
+
+footer p {
+    margin: 0px;
 }
