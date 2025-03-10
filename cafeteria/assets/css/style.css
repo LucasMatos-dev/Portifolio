@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: #f8f6f4;
+    font-family: 'Inter', Arial, sans-serif;
+    background: linear-gradient(to bottom, #ffffff, #dadada);
+  }
+  
+  header {
+    background: #816c53;
+    color: #ffffff;
+    width: 100%;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+  }
+  
+  
+  header img {
+    width: 100px;
+    border-radius: 8px;
+    margin-right: 16px;
+  }
+  
+  .cardapio {
+    background-color: rgb(244, 244, 244);
+    border: 2px solid #000;
+    border-radius: 8px;
+    padding: 30px 50px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  }
+
+  .linha {
+    display: flex;
+    justify-content: space-around;
+  }
+
+ .cardapio ol li ul li {
+  font-size: 15px;
+ }
+
+ .cardapio h2 {
+  margin-bottom: 0.5rem;
+ }
+
+  .horario {
+    background-color: rgb(244, 244, 244);
+    border: 2px solid #000;
+    border-radius: 8px;
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  }
+  
+  .horario table {
+    margin: auto;
+  }
+
+  .horario h2 {
+    margin-bottom: 0.5rem;
+   }
+
+  .contato {
+    background-color: rgb(244, 244, 244);
+    border: 2px solid #000;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 20px auto;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  }
+
+  .contato h2 {
+    margin-bottom: 0.5rem;
+   }
+  
+  .contato form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contato button {
+    margin-top: 8px;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    background: #745940;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .contato button:hover {
+    opacity: 0.8;
+  }
+  
+  .botaoPortifolio {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .botaoPortifolio a {
+    padding: 8px 16px;
+    text-decoration: none;
+    background: #745940;
+    color: #fff;
+    border-radius: 4px;
+    
+  }
+  
+  .botaoPortifolio a:hover {
+    opacity: 0.8;
+  }
+  
+  footer {
+    background: #816c53;
+    color: #ffffff;
+    width: 100%;
+    text-align: center;
+    padding: 8px;
+    margin-top: auto;
+  }
+  

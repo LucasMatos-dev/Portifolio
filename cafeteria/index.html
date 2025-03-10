@@ -1,199 +1,225 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cafeteria Lucas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
-    <img src="./assets/images/cafe_essencia.png" alt="Cafe Essencia." , width="300" />
-    <h1>Bem vindo ao Cafe Essencia</h1>
-    <h2>O melhor cafe da cidade!</h2>
-    <h2>Horários de Funcionamento:</h2>
-    <table border="8px" cellspacing="0" cellpadding="8px">
-        <thead>
-            <tr>
-                <th>Horários</th>
-                <th>Segunda</th>
-                <th>Terça</th>
-                <th>Quarta</th>
-                <th>Quinta</th>
-                <th>Sexta</th>
-                <th>Sábado</th>
-                <th>Domingos e<br />Feriados</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th>Manhã</th>
-                <td>08:00<br /> 12:00</td>
-                <td rowspan="2"> Fechado</td>
-                <td>08:00<br /> 12:00</td>
-                <td>08:00<br /> 12:00</td>
-                <td>08:00<br /> 12:00</td>
-                <td>08:00<br /> 12:00</td>
-                <td rowspan="2"> 08:00 <br /> 12:00</td>
-            </tr>
-            <tr>
-                <th>Tarde</th>
-                <td>14:00 <br /> 18:00</td>
-                <td>14:00 <br /> 18:00</td>
-                <td>14:00 <br /> 18:00</td>
-                <td>14:00 <br /> 18:00</td>
-                <td>14:00 <br /> 18:00</td>
-            </tr>
-        </tbody>
-    </table>
-    <br />
+    <header>
+        <img src="./assets/images/cafe_essencia.png" alt="Cafe Essencia." , width="300" />
+        <h1>Cafe Essencia</h1>
+        <!-- <h2>O melhor cafe da cidade!</h2> -->
+    </header>
 
-    <h2>Bebidas</h2>
-    <ol type="1">
-        <li>
-            <strong>Café Expresso</strong>
-            <ul>
-                <li>Café</li>
-                <li>Água</li>
-            </ul>
-        </li>
-        <li>
-            <strong>Café com Leite</strong>
-            <ul>
-                <li>Café</li>
-                <li>Leite</li>
-            </ul>
-        </li>
-        <li>
-            <strong>Capuccino</strong>
-            <ul>
-                <li>Café</li>
-                <li>Leite vaporizado</li>
-                <li>Espuma de leite</li>
-                <li>Canela (opcional)</li>
-            </ul>
-        </li>
-        <li>
-            <strong>Suco de Laranja</strong>
-            <ul>
-                <li>Laranja</li>
-                <li>Água</li>
-                <li>Açúcar (opcional)</li>
-            </ul>
-        </li>
-    </ol>
+    <div class="cardapio">
+        <div class="linha">
+          <div class="bebidas">
+            <h2>Bebidas:</h2>
+            <ol type="1">
+              <li>
+                <strong>Café Expresso</strong>
+                <ul>
+                  <li>Café</li>
+                  <li>Água</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Café com Leite</strong>
+                <ul>
+                  <li>Café</li>
+                  <li>Leite</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Capuccino</strong>
+                <ul>
+                  <li>Café</li>
+                  <li>Leite vaporizado</li>
+                  <li>Espuma de leite</li>
+                  <li>Canela (opcional)</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Suco de Laranja</strong>
+                <ul>
+                  <li>Laranja</li>
+                  <li>Água</li>
+                  <li>Açúcar (opcional)</li>
+                </ul>
+              </li>
+            </ol>
+          </div>
 
-    <h2>Salgados</h2>
-    <ol type="1">
-        <li>
-            <strong>Coxinha</strong>
-            <ul>
-                <li>Frango desfiado</li>
-                <li>Massa de batata</li>
-                <li>Farinha de trigo</li>
-                <li>Óleo para fritar</li>
-            </ul>
-        </li>
-        <li>
-            <strong>Empada de Frango</strong>
-            <ul>
-                <li>Massa de empada</li>
-                <li>Frango desfiado</li>
-                <li>Azeitonas</li>
-                <li>Requeijão</li>
-            </ul>
-        </li>
-        <li>
-            <strong>Sanduíche Natural</strong>
-            <ul>
-                <li>Pão integral</li>
-                <li>Peito de peru</li>
-                <li>Alface e tomate</li>
-                <li>Cenoura ralada</li>
-            </ul>
-        </li>
-        <li>
-            <strong>Pão de Queijo</strong>
-            <ul>
-                <li>Polvilho</li>
-                <li>Queijo ralado</li>
-                <li>Ovos</li>
-                <li>Leite e óleo</li>
-            </ul>
-        </li>
-    </ol>
-
-    <h2>Doces</h2>
-    <ol type="1">
-        <li>
-            <strong>Brigadeiro</strong>
-            <ul>
+          <div class="salgados">
+            <h2>Salgados:</h2>
+            <ol type="1">
+              <li>
+                <strong>Coxinha</strong>
+                <ul>
+                  <li>Frango desfiado</li>
+                  <li>Massa de batata</li>
+                  <li>Farinha de trigo</li>
+                  <li>Óleo para fritar</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Empada de Frango</strong>
+                <ul>
+                  <li>Massa de empada</li>
+                  <li>Frango desfiado</li>
+                  <li>Azeitonas</li>
+                  <li>Requeijão</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Sanduíche Natural</strong>
+                <ul>
+                  <li>Pão integral</li>
+                  <li>Peito de peru</li>
+                  <li>Alface e tomate</li>
+                  <li>Cenoura ralada</li>
+                </ul>
+              </li>
+              <li>
+                <strong>Pão de Queijo</strong>
+                <ul>
+                  <li>Polvilho</li>
+                  <li>Queijo ralado</li>
+                  <li>Ovos</li>
+                  <li>Leite e óleo</li>
+                </ul>
+              </li>
+            </ol>
+          </div>
+        
+    
+        <div class="doces">
+          <h2>Doces:</h2>
+          <ol type="1">
+            <li>
+              <strong>Brigadeiro</strong>
+              <ul>
                 <li>Leite condensado</li>
                 <li>Chocolate em pó</li>
                 <li>Manteiga</li>
                 <li>Granulado</li>
-            </ul>
-        </li>
-        <li>
-            <strong>Pudim</strong>
-            <ul>
+              </ul>
+            </li>
+            <li>
+              <strong>Pudim</strong>
+              <ul>
                 <li>Leite condensado</li>
                 <li>Leite</li>
                 <li>Ovos</li>
                 <li>Açúcar para a calda</li>
-            </ul>
-        </li>
-        <li>
-            <strong>Cookie de Chocolate</strong>
-            <ul>
+              </ul>
+            </li>
+            <li>
+              <strong>Cookie de Chocolate</strong>
+              <ul>
                 <li>Farinha de trigo</li>
                 <li>Manteiga</li>
                 <li>Açúcar</li>
                 <li>Gotas de chocolate</li>
-            </ul>
-        </li>
-    </ol>
+              </ul>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </div>
+<div class="horario">
+  <h2>Horários de Funcionamento:</h2>
+  <table border="8px" cellspacing="0" cellpadding="8px">
+    <thead>
+        <tr>
+            <th>Horários</th>
+            <th>Segunda</th>
+            <th>Terça</th>
+            <th>Quarta</th>
+            <th>Quinta</th>
+            <th>Sexta</th>
+            <th>Sábado</th>
+            <th>Domingos e<br />Feriados</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>Manhã</th>
+            <td>08:00<br /> 12:00</td>
+            <td rowspan="2"> Fechado</td>
+            <td>08:00<br /> 12:00</td>
+            <td>08:00<br /> 12:00</td>
+            <td>08:00<br /> 12:00</td>
+            <td>08:00<br /> 12:00</td>
+            <td rowspan="2"> 08:00 <br /> 12:00</td>
+        </tr>
+        <tr>
+            <th>Tarde</th>
+            <td>14:00 <br /> 18:00</td>
+            <td>14:00 <br /> 18:00</td>
+            <td>14:00 <br /> 18:00</td>
+            <td>14:00 <br /> 18:00</td>
+            <td>14:00 <br /> 18:00</td>
+        </tr>
+    </tbody>
+</table>
+</div>
 
-    <h1>Formulario de Contato:</h1>
-    <form>
-        <label>
-            <p>Digite o seu nome completo:</p>
-            <input type="text" name="nome" placeholder="Nome completo" required>
-        </label>
-        <br />
+    <div class="contato">
+        <h1>Formulario de Contato:</h1>
+        <form>
+            <label>
+                <p>Digite o seu nome completo:</p>
+                <input type="text" name="nome" placeholder="Nome completo" required>
+            </label>
+            <br />
 
-        <label>
-            <p>Digite o seu email:</p>
-            <input type="email" name="email" placeholder="Seu email" required>
-        </label>
-        <br />
+            <label>
+                <p>Digite o seu email:</p>
+                <input type="email" name="email" placeholder="exemplo@gmail.com" required>
+            </label>
+            <br />
 
-        <label>
-            <p>Digite seu telefone:</p>
-            <input type="tel" name="telefone" placeholder="Seu telefone">
-        </label>
-        <br />
+            <label>
+                <p>Digite seu telefone:</p>
+                <input type="tel" name="telefone" placeholder="(XX)XXXXX-XXXX">
+            </label>
+            <br />
 
-        <label>
-            <p>Digite o assunto do contato:</p>
-            <input type="text" name="Assunto" placeholder="Assunto do contato" required> 
-        </label>
-        <br />
+            <label>
+                <p>Digite o assunto do contato:</p>
+                <input type="text" name="Assunto" placeholder="Assunto do contato" required>
+            </label>
+            <br />
 
-        <label>
-            <p>Escreva sua duvida:</p>
-            <textarea name="Texto" id ="texto" placeholder="Sua duvida" required></textarea>
-        </label>
-        <br />
+            <label>
+                <p>Escreva sua duvida:</p>
+                <textarea name="Texto" id="texto" placeholder="Motivo do contato" required></textarea>
+            </label>
+            <br />
 
-        <button type="submit">Enviar</button> <br />
-        <button type="reset">Resetar Informações</button>
-    </form>
+            <button type="submit">Enviar</button>
+            <button type="reset">Resetar Informações</button>
+        </form>
+    </div>
 
-    <br />
-    <a href="../index.html">Voltar para o <strong>Portifólio</strong></a>
-    
+    <div class="botaoPortifolio">
+        <a href="../index.html">Voltar para o <strong>Portifólio</strong></a>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Cafe Essencia. Todos os direitos reservados.</p>
+    </footer>
+
 </body>
 
 </html>
