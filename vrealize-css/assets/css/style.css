@@ -2,119 +2,192 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+  }
 
-body {
+  body {
     font-family: Inter, Arial, Helvetica, sans-serif;
-    box-sizing: border-box;
     height: 100%;
-
-    display: grid;
-    grid-template-areas: 'header header' 'menu main' 'footer footer';
-    grid-template-columns: 200px 1fr;
-    grid-template-rows: 132px 1fr 60px;
-}
-
-main {
-    grid-area: main;
-}
-
-li {
-    padding-bottom: 8px;
-}
-
-h1 {
-    font-size: 32px;
-    font-weight: 700;
-}
-
-h2 {
-    font-size: 20px;
-    font-weight: 650;
-    margin-bottom: 16px;
-}
-
-p {
-    text-align: justify;
-    text-indent: 10px;
-    margin-block: 16px;
-}
-
-ul {
-    padding-left: 30px;
-}
-
-header#header {
+  }
+  
+  header#header {
     background-color: #8f97a9;
     color: #FFFFFF;
     padding: 16px 32px;
     position: fixed;
     top: 0;
-    left: 0px;
+    left: 0;
     right: 0;
     height: 100px;
-    grid-area: header;
-}
+  }
+  
+  .menu-button {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    right: 32px;
+    transform: translateY(-50%);
+    border: 0;
+    background: none;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+  }
+  
+  .menu-button div {
+    height: 5px;
+    width: 32px;
+    background-color: white;
+    border-radius: 5px;
+    position: relative;
+    transition: 0.3s;
+    opacity: 0.8;
+  }
+  
+  .menu-button div::before,
+  .menu-button div::after {
+    content: '';
+    height: 5px;
+    width: 32px;
+    background-color: white;
+    border-radius: 5px;
+    position: absolute;
+    left: 0;
+    transition: 0.3s;
+  }
+  
+  .menu-button div::before {
+    top: -10px;
+    opacity: 1;
+  }
+  
+  .menu-button div::after {
+    bottom: -10px;
+  }
 
-header p {
-    text-indent: 0;
-    margin: 0;
-}
+  .menu-button:hover div{
+    transform: rotate(-45deg);
+    opacity: 1;
+  }
 
-.menu {
+  .menu-button:hover div::before{
+   opacity: 0;
+  }
+
+  .menu-button:hover div::after{
+    left: 0;
+    bottom: 0;
+    transform: rotate(-90deg);
+  }
+  
+  .menu {
+    display: none; 
     background-color: #a3acc1;
     color: #363636;
     padding: 16px 16px 8px;
-    display: block;
     margin: 0 auto;
     width: 100%;
-    max-width: 200px;
+    max-width: 150px;
     position: fixed;
     top: 100px;
     bottom: 0;
-}
-
-.menu b {
+    left: 0;     
+  }
+  
+  .menu b {
     display: inline-block;
     margin-bottom: 1rem;
-}
-
-.menu nav {
+  }
+  
+  .menu nav {
     height: 100%;
-}
-
-.menu nav ul {
-    height: 100%;
+  }
+  
+  .menu nav ul {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex;
+    align-items: flex-start; 
     gap: 10px;
-}
-
-.menu nav ul li a {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .menu nav ul li a {
+    position: relative;
+    overflow: hidden;
+    opacity: 0.75;
+    transition: 300ms;
+  
     background-color: #d6dbe7;
     color: #525252;
     font-weight: 650;
     font-size: 16px;
     padding: 8px;
+    min-width: 120px;
     border-radius: 50px;
     text-decoration: none;
     display: block;
     text-align: center; 
-    margin-bottom: 0.5rem; /* espaçamento entre os botões */
-}
-
-.intro {
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Efeito de linha branca ao hover */
+  .menu nav ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -100%;
+    width: 100%;
+    height: 3px;
+    background: white;
+    transition: 300ms;
+  }
+  
+  .menu nav ul li a:hover {
+    opacity: 1;
+  }
+  
+  .menu nav ul li a:hover::before {
+    left: 0%;
+  }
+  
+  .portifolioBotao {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .portifolioBotao a {
+    background-color: #d6dbe7;
+    color: #525252;
+    font-weight: 650;
+    font-size: 16px;
+    padding: 6px;
+    border-radius: 50px;
+    text-decoration: none;
+  }
+  
+  main {
+    margin-top: 110px;
+    margin-left: 0px;
+  }
+  
+  .intro {
     width: 90%;
     margin: 0 auto;
     background: #dbe2e8;
     padding: 16px;
     margin-bottom: 32px;
     border: 2px solid black;
-}
-
-.post {
+  }
+  
+  .post {
     width: 90%;
     margin: 0 auto;
     background: #ebe9e8;
@@ -122,53 +195,80 @@ header p {
     margin-bottom: 32px;
     border: 2px solid black;
     border-radius: 20px;
-}
-
-.post h2 {
+  }
+  
+  .post h2 {
     text-align: center;
-}
-
-.post img {
+  }
+  
+  .post img {
     display: block;
     margin: 0 auto;
     width: 100%;
     max-width: 800px;
     height: auto;
     border: 3px solid #4d545b;
-    aspect-ratio: 16 /9;
+    aspect-ratio: 16 / 9;
     object-fit: cover;
-    object-position: center 0px;
+    object-position: center 0;
     border-radius: 20px;
-}
-
-.portifolioBotao {
-    position: absolute;
-    bottom: 20px; /* Ajuste conforme necessário */
-    left: 50%;
-        transform: translateX(-50%);
-}
-
-.portifolioBotao a {
-    background-color: #d6dbe7;
-    color: #525252;
+  }
+  
+  h1 {
+    font-size: 32px;
+    font-weight: 700;
+  }
+  
+  h2 {
+    font-size: 20px;
     font-weight: 650;
-    font-size: 16px;
-    padding: 8px;
-    border-radius: 50px;
-    text-decoration: none;
-}
+    margin-bottom: 16px;
+  }
+  
+  p {
+    text-align: justify;
+    text-indent: 10px;
+    margin-block: 16px;
+  }
+  
+  ul {
+    padding-left: 30px;
+  }
+  
 
-footer {
-    margin-left: 200px;
-    width: calc(100% - 200px);
+  footer {
     background-color: #d6dbe7;
     color: #525252;
     display: flex;
     align-items: center;
     justify-content: center;
-    grid-area: footer;
-}
+    height: 60px; 
+    margin-left: 150px;
+    width: calc(100% - 150px);
+  }
+  
+  footer p {
+    margin: 0;
+  }
 
-footer p {
-    margin: 0px;
-}
+  @media (min-width: 600px) {
+    main {
+      margin-top: 110px;
+      margin-left: 150px;
+    }
+    
+    .menu {
+      display: flex; /* Exibe o menu em telas de pc */
+    }
+    
+    .menu-button {
+      display: none; /* Oculta o botão de menu em telas de pc */
+    }
+  }
+  
+  @media (max-width: 599px) {
+    footer {
+      margin-left: 0;
+      width: 100%;
+    }
+  }
