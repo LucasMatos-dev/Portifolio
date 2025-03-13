@@ -1,41 +1,43 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Podcast</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Podcast</title>
+  <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 <body>
-     <header class="centralizar">
-        <img src="./assets/images/CT.gif" alt="fundo" width="20%">
-        <h1>CyberTech Podcast</h1>
-        <h3>Apresentado por Anna Lara e Lucas de Matos, o Cybertech Podcast é o seu espaço para explorar as grandes questões 
-            do mundo da tecnologia. Vamos além das manchetes para discutir inovação, inteligência artificial, código aberto, 
-            privacidade digital, a influência das big techs e muito mais. Sem filtros, sem enrolação – apenas discussões profundas 
-            e provocativas sobre o presente e o futuro da tecnologia.</h3>
-    </header>
-    <main>
-        <table width="100%">
-            <tr>
-                <th width="30%">
-                     <a href="./index.html">HOME</a>    
-                </th>
-                <th rowspan="2" >
-                    <video controls width="100%">
-                        <source src="./assets/video/introCyberTech.mp4" type="video/mp4">
-                    </video>
-                </th>
-            </tr>
-            <tr >
-                <th width="30%">
-                    <a href="./postagens.html">POSTAGENS</a>
-                </th>
-            </tr>
-        </table>
-    </main>
-    
-    <br />
-    <a href="../index.html">Voltar para o <strong>Portifólio</strong></a>
+
+  <header class="cabecalho">
+    <nav class="links">
+      <a href="./index.html">Início</a>
+      <a href="../index.html">Portifólio</a>
+    </nav>
+    <img src="assets/images/CT.gif" alt="Logo" class="logo" />
+    <h1>Cybertech Podcast</h1>
+    <p class="descricao">
+      Apresentado por Anna Lara e Lucas de Matos, o Cybertech Podcast é o seu espaço para explorar as grandes questões do mundo da tecnologia. Vamos além das manchetes para discutir inovação, inteligência artificial, código aberto, privacidade digital, a influência das big techs e muito mais. Sem filtros, sem enrolação – apenas discussões profundas e provocativas sobre o presente e o futuro da tecnologia.
+    </p>
+  </header>
+
+  <main class="conteudo">
+    <div class="layout-navegacao">
+      <div class="video">
+        <video controls class="video-podcast">
+          <source src="./assets/video/introCyberTech.mp4" type="video/mp4" />
+          Seu navegador não suporta vídeo HTML5.
+        </video>
+      </div>
+    </div>
+  </main>
+
+  <div class="botao-postagens">
+        <a href="./postagens.html">➦Postagens</a>
+    </div>
+  </div>
+
 </body>
 </html>

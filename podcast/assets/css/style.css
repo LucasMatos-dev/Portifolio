@@ -1,3 +1,179 @@
-.centralizar {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    background: linear-gradient(to bottom, #e0dee1, #d0acda);
+    color: #e0e0e0; 
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 20px;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .cabecalho {
     text-align: center;
-}
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #121122;
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.2);
+    position: relative;
+  }
+
+  .cabecalho:hover {
+    transform: scale(1.01);
+    box-shadow: 0 0 15px rgba(255, 105, 180, 0.4);
+  }
+  
+  .logo {
+    display: block;
+    max-width: 200px; 
+    height: auto;
+    margin: 0 auto 20px auto;
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .logo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 105, 180, 0.5);
+  }
+  
+  .cabecalho h1 {
+    color: #ed009c;
+    margin-bottom: 10px;
+    font-weight: 300;
+  }
+  
+  .descricao {
+    margin-bottom: 0;
+    color: #e0e0e0;
+    padding: 0 10px;
+  }
+  
+  .conteudo {
+    margin-bottom: 20px;
+  }
+  
+  .layout-navegacao {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  /* O container do vídeo recebe position relative para referência */
+  .video {
+    position: relative;
+  }
+  
+  
+  .links {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+    max-width: 210px;
+    width: 100%;
+  }
+  
+  .links a {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #800080;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 50px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    max-width: 210px;
+    width: 100%;
+  }
+  
+  .links a:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.3);
+  }
+  
+  .video .video-podcast {
+    max-width: 900px; 
+    width: 100%;
+    border-radius: 6px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.3);
+  }
+  
+  .video-podcast:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 15px rgba(255, 105, 180, 0.5);
+  }
+  
+  .botao-postagens {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+  }
+  
+  .botao-postagens a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #800080;
+    color: #fff;
+    font-weight: 650;
+    font-size: 16px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .botao-postagens a:hover {
+    opacity: 0.85;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.3);
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .cabecalho {
+      padding: 15px;
+    }
+    .logo {
+      max-width: 150px;
+      margin-bottom: 15px;
+    }
+    .layout-navegacao {
+      flex-direction: column;
+      align-items: center;
+    }
+    .links-navegacao {
+      width: 100%;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+    .links-navegacao a {
+      width: 80%;
+      margin-bottom: 8px;
+      padding: 8px;
+      font-size: 14px;
+    }
+    .video .video-podcast {
+      max-width: 100%;
+    }
+  }
+  

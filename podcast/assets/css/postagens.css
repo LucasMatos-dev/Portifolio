@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    background: linear-gradient(to bottom, #e0dee1, #d0acda);
+    color: #000000;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.centralizar-texto {
+    text-align: center;
+}
+
+.logo {
+    display: block;
+    margin: 0 auto 20px auto;
+    max-width: 300px;
+    height: auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.2);
+}
+
+.logo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 105, 180, 0.4);
+}
+
+.header-container {
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #121122;
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.2);
+}
+
+.header-container:hover {
+    transform: scale(1.01);
+    box-shadow: 0 0 15px rgba(255,105,180,0.4);
+  }
+
+.header-container h1 {
+    color: #ed009c;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.header-container h3 {
+    color: #e0e0e0;
+    font-weight: 400;
+}
+
+.main-container {
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.sidebar {
+    flex: 0 0 150px;
+}
+
+.sidebar ul {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    display: block;
+    padding: 10px;
+    background-color: #b64ab8;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 5px;
+    border-radius: 4px;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    background-color: #b300b3;
+    background-color: #b300b3;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.3);
+}
+
+.links {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+    max-width: 100px;
+    width: 100%;
+  }
+  
+  .links a {
+    padding: 10px 20px;
+    background-color: #800080;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .links a:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255,105,180,0.3);
+  }
+  
+
+.post {
+    flex: 1;
+    min-width: 300px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 15px rgba(255, 192, 203, 0.3);
+}
+
+.post-header {
+    margin-bottom: 10px;
+}
+
+.conteudo-post {
+    margin-bottom: 10px;
+}
+
+.conteudo-post audio {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.conteudo-post ul {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.conteudo-post figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.conteudo-post figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    box-shadow: 0 0 10px rgba(255, 192, 203, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.conteudo-post figure img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 15px rgba(255, 192, 203, 0.6);
+}
+
+.conteudo-post figure figcaption {
+    font-size: 0.9rem;
+    color: #666;
+    text-align: center;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .header-container {
+        padding: 15px;
+    }
+
+    .logo {
+        max-width: 200px;
+        margin-bottom: 15px;
+    }
+
+    .header-container h1 {
+        font-size: 24px;
+    }
+
+    .header-container h3 {
+        font-size: 16px;
+    }
+
+    .main-container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        flex: 0 0 auto;
+        width: 100%;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .sidebar ul li a {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .post {
+        min-width: 100%;
+        margin-bottom: 15px;
+        padding: 15px;
+    }
+}
