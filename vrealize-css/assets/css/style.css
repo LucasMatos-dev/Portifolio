@@ -20,6 +20,11 @@ header#post-header {
   height: 100px;
 }
 
+header#post-header h1,
+header#post-header h2 {
+  margin-right: 80px;
+}
+
 .menu-button {
   width: 40px;
   height: 40px;
@@ -217,9 +222,8 @@ h1 {
 }
 
 h2 {
-  font-size: 20px;
+  font-size: 14px;
   font-weight: 650;
-  font-size: 18px; 
 }
 
 p {
