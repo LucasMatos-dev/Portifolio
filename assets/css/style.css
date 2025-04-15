@@ -1,56 +1,40 @@
-* {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-
 body {
-    font-family: Inter, Arial, Helvetica, sans-serif;
-    background: linear-gradient(to bottom, #b1c7cf, #e3e8e9);
-}
-
-.portifolio h1 {
-    font-size: 32px;
-    font-weight: 700;
-}
-
-.portifolio h2 {
-    font-size: 20px;
-    font-weight: 650;
-    margin-bottom: 1rem;
-}
-
-.portifolio p {
-    line-height: 1.2;
-}
-
-.projetos ul {
-    color: #000000;
-    font-size: 18px;
-}
-
-.projetos ul ul {
-    font-size: 15px;
-}
-
-.projetos a {
-    color: #0074b8;
-    text-decoration: none;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  background: linear-gradient(to bottom, #b1c7cf, #e3e8e9);
 }
 
 .fotoPerfil {
-    height: auto;
-    border-radius: 100%;
+  width: 250px;
+  height: 250px;
+}
+
+.card {
+  width: 300px;
+  flex-shrink: 0;
+}
+
+.card-img-css {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 576px) {
+  .card {
     width: 250px;
+  }
+
+  .card-img-css {
     height: 250px;
-    object-fit: cover;
-    object-position: center 0px;
-    margin-top: 25px;
-    margin-bottom: 14px;
-    border: 3px solid black;
+  }
 }
 
 .redeSocial a img{
-    height: auto;
-    width: 50px;
+  height: auto;
+  width: 50px;
+}
+
+a,
+a img {
+  text-decoration: none;
 }

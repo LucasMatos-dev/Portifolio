@@ -2,87 +2,149 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Portifólio - Lucas de Matos</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Portifólio - Lucas de Matos Oliveira</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
-<body>
-    <div class="portifolio">
-
-        <main>
-
-            <img src="./assets/images/eu.jpg" alt="Minha foto." class="fotoPerfil" />
-            <h1>Meu nome é Lucas de Matos</h1>
-            <h2>Sou um desenvolvedor Full Stack</h2>
-
-            <p>Adoro criar <strong>sites</strong> e <strong>sistemas</strong> para a <i>internet</i>.</p>
-            <p>
-                Tenho um grande interesse em <strong>segurança da informação</strong>,<br />
-                <strong>automação</strong> e <strong>experiência do usuário (UX)</strong>.
-            </p>
-
-        </main>
-
-        <br />
-
-        <article class="post">
-            <header class="header">
-                <h2>Lista de Projetos:</h2>
-            </header>
-            <section class="projetos">
-                <ul class="projetos" style="list-style: disc; ">
-                    <li>
-                        <a href="./cafeteria/index.html">Cafeteria Essencia</a>
-                    </li>
-                    <ul>Cafeteria basica feita em HTML.</ul>
-                    </li>
-                    <a href="./podcast/index.html">Podcast CyberTech</a></li>
-                    <ul>Site de um podcast focado em tecnologia.</ul>
-                    </li>
-                    <li>
-                        <a href="./card/index.html">Cartão de Visita</a>
-                    </li>
-                    <ul>Estilo Linketree</ul>
-                    </li>
-                    <li>
-                        <a href="./vrealize-css/index.html">Site VRealize-CSS</a>
-                    </li>
-                    <ul>Site feito usando CSS.</ul>
-                    </li>
-                    <li>
-                        <a href="./vrealize-table/index.html">Site VRealize-Tabelas</a>
-                    </li>
-                    <ul>Site feito usando tabelas em HTML.</ul>
-                    </li>
-                    <li>
-                        <a href="./baralho/index.html">Carta de Baralho</a>
-                    </li>
-                    <ul>Um A's que vira ao passar o mouse.</ul>
-                    </li>
-                    <li>
-                </ul>
-            </section>
-        </article>
-
-        <br />
-
-        <div class="redeSocial">
-            <a href="https://www.linkedin.com/in/lucasmatos-dev/">
-                <img src="./assets/images/linkedin.png" alt="Linkedin">
-            </a>
-            <a href="https://github.com/LucasMatos-dev">
-                <img src="./assets/images/github.png" alt="Github">
-            </a>
-        </div>
-
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">Lucas de Matos Oliveira</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="#sobre">Sobre</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projetos">Projetos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+      </ul>
     </div>
+  </div>
+</nav>
+
+<main class="container py-5" id="sobre">
+  <div class="row align-items-center">
+    <div class="col-md-3 text-center text-md-start mb-3 mb-md-0">
+      <img src="./assets/images/eu.jpg" alt="Minha foto."
+        class="img-fluid rounded-circle border border-dark fotoPerfil" />
+    </div>
+    <div class="col-md-8 text-center text-md-start">
+      <h1 class="display-4 text-primary fw-medium">Meu nome é Lucas de Matos Oliveira</h1>
+      <h2 class="text-secondary">Sou um desenvolvedor Full Stack</h2>
+      <p class="fw-normal">
+        Adoro criar <span class="fw-bold">sites</span> e <span class="fw-bold">sistemas</span>
+        para a <i>internet</i>.
+        <br>
+        Tenho um grande interesse em
+        <span class="fw-bold">segurança da informação</span>, <span class="fw-bold">automação</span>
+        e <span class="fw-bold">experiência do usuário (UX)</span>.
+      </p>
+    </div>
+  </div>
+</main>
+
+<section class="container my-5" id="projetos">
+  <h2 class="fw-bold mb-4">Lista de Projetos:</h2>
+
+  <div class="d-flex flex-nowrap overflow-auto gap-3 pb-3 border-bottom">
+
+    <div class="card">
+      <img src="./assets/images/cafe_essencia.png" class="card-img-top card-img-css" alt="Cafeteria Essencia" />
+      <div class="card-body">
+        <h5 class="card-title text-primary">Cafeteria Essencia</h5>
+        <p class="card-text text-muted">Cafeteria básica feita em HTML.</p>
+        <a href="./cafeteria/index.html" class="btn btn-outline-primary btn-sm">Ver projeto</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="./assets/images/podcast.gif" class="card-img-top card-img-css" alt="Podcast CyberTech" />
+      <div class="card-body">
+        <h5 class="card-title text-primary">Podcast CyberTech</h5>
+        <p class="card-text text-muted">Site de um podcast focado em tecnologia.</p>
+        <a href="./podcast/index.html" class="btn btn-outline-primary btn-sm">Ver projeto</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="./assets/images/linktree.jpeg" class="card-img-top card-img-css" alt="Cartão de Visita" />
+      <div class="card-body">
+        <h5 class="card-title text-primary">Cartão de Visita</h5>
+        <p class="card-text text-muted">Estilo Linktree.</p>
+        <a href="./card/index.html" class="btn btn-outline-primary btn-sm">Ver projeto</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="./assets/images/site_alpar.jpeg" class="card-img-top card-img-css" alt="Cartão de Visita" />
+      <div class="card-body">
+        <h5 class="card-title text-primary">Site Alpar</h5>
+        <p class="card-text text-muted">Site criado usando bootstrap. Baseado no site da Alpar.</p>
+        <a href="./site-alpar-bootstrap/index.html" class="btn btn-outline-primary btn-sm">Ver projeto</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="./assets/images/vr_realize.jpeg" class="card-img-top card-img-css" alt="Site VRealize-CSS" />
+      <div class="card-body">
+        <h5 class="card-title text-primary">Site VRealize-CSS</h5>
+        <p class="card-text text-muted">Site feito usando CSS.</p>
+        <a href="./vrealize-css/index.html" class="btn btn-outline-primary btn-sm">Ver projeto</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="./assets/images/vr_realize_tabela.jpeg" class="card-img-top card-img-css" alt="Site VRealize-Tabelas" />
+      <div class="card-body">
+        <h5 class="card-title text-primary">Site VRealize-Tabelas</h5>
+        <p class="card-text text-muted">Site feito usando tabelas em HTML.</p>
+        <a href="./vrealize-table/index.html" class="btn btn-outline-primary btn-sm">Ver projeto</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="./assets/images/carta_baralho.jpeg" class="card-img-top card-img-css" alt="Carta de Baralho" />
+      <div class="card-body">
+        <h5 class="card-title text-primary">Carta de Baralho</h5>
+        <p class="card-text text-muted">Um A's que vira ao passar o mouse.</p>
+        <a href="./baralho/index.html" class="btn btn-outline-primary btn-sm">Ver projeto</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="./assets/images/portifolio_orginal.jpeg" class="card-img-top card-img-css" alt="Carta de Baralho" />
+      <div class="card-body">
+        <h5 class="card-title text-primary">Portifolio Original</h5>
+        <p class="card-text text-muted">Feito usando html e css.</p>
+        <a href="./portifolio-original/index.html" class="btn btn-outline-primary btn-sm">Ver projeto</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="container text-center mb-5 redeSocial" id="contato">
+  <h3 class="fw-bold mb-4">Entre em contato:</h3>
+  <a href="https://www.linkedin.com/in/lucasmatos-dev/" target="_blank" class="mx-2">
+    <img src="./assets/images/linkedin.png" alt="Linkedin">
+  </a>
+  <a href="https://github.com/LucasMatos-dev" target="_blank" class="mx-2">
+    <img src="./assets/images/github.png" alt="Github">
+  </a>
+</section>
+
+<footer class="bg-dark text-white text-center py-3">
+  <p class="mb-0">© 2025 Lucas de Matos Oliveira. Todos os direitos reservados.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js">
+</script>
 </body>
 
 </html>
