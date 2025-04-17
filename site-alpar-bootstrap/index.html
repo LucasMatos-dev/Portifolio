@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bootstrap</title>
+    <title>Alpar - Conectando negócios a soluções inovadoras</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
 </head>
@@ -40,17 +40,11 @@
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">Suporte</a></li>
                                 <li><a class="dropdown-item" href="#">Treinamento</a></li>
-                                <!-- <li>
-                                    <hr class="dropdown-divider">
-                                </li> -->
                                 <li><a class="dropdown-item" href="#">Aplicativos Personalizados</a></li>
                                 <li><a class="dropdown-item" href="#">Modernização de aplicações</a></li>
                                 <li><a class="dropdown-item" href="#">Hiperautomação</a></li>
                             </ul>
                         </li>
-                        <!-- <li class="nav-item">
-                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                    </li> -->
                     </ul>
                     <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -129,7 +123,67 @@
                         </div>
                     </div>
                 </div>
-            </div>
+                <div class="container mt-5">
+                    <div class="row">
+
+                        <div class="col-md-6 mb-4">
+                            <iframe width="100%" height="400"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d228.64308220652103!2d-46.72770301627044!3d-23.522094450013398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef99bad1e059f%3A0x4b23b5fbd223a29e!2sAlparService!5e0!3m2!1spt-BR!2sbr!4v1744890353009!5m2!1spt-BR!2sbr"
+                                style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="border rounded-5 p-4 shadow-sm bg-white">
+                                <form id="contactForm" novalidate>
+                                    <h3 class="mb-4">Entre em contato</h3>
+
+                                    <div class="mb-3">
+                                        <label for="name" class="form-label">Nome</label>
+                                        <input type="text" class="form-control" id="name" name="name"
+                                            placeholder="Seu nome" required>
+                                        <div class="invalid-feedback">Por favor, insira seu nome.</div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">E-mail</label>
+                                        <input type="email" class="form-control" id="email" name="email"
+                                            placeholder="name@example.com" required>
+                                        <div class="invalid-feedback">Digite um e-mail válido.</div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="subject" class="form-label">Assunto</label>
+                                        <select id="subject" class="form-select" name="subject" required>
+                                            <option selected disabled value="">Selecione uma opção</option>
+                                            <option value="modernizacao">Modernização de Aplicações</option>
+                                            <option value="hiperautomacao">Integrações e Hiperautomação</option>
+                                            <option value="desenvolvimento">Desenvolvimento Flexível</option>
+                                            <option value="digitalizacao">Digitalização e Adoção</option>
+                                            <option value="suporte">Serviços Gerenciados e Suporte</option>
+                                            <option value="academy">Capacitação - Alpar Academy</option>
+                                            <option value="sistema">Quero um sistema completo</option>
+                                            <option value="orcamento">Orçamentos</option>
+                                        </select>
+                                        <div class="invalid-feedback">Selecione um assunto.</div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="message" class="form-label">Mensagem</label>
+                                        <textarea class="form-control" id="message" name="message"
+                                            placeholder="Digite a sua mensagem" rows="3" required></textarea>
+                                        <div class="invalid-feedback">Digite sua mensagem.</div>
+                                    </div>
+
+                                    <div class="alert alert-success d-none" id="successMessage" role="alert">
+                                        Mensagem enviada com sucesso!
+                                    </div>
+
+                                    <button type="submit" class="btn btn-primary w-100">Enviar</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
         </section>
 
         <footer class="mt-auto py-4 bg-dark text-white text-center">
@@ -139,6 +193,23 @@
         </footer>
 
     </div>
+
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const form = e.target;
+            const successMessage = document.getElementById("successMessage");
+            if (form.checkValidity()) {
+                form.classList.remove("was-validated");
+                successMessage.classList.remove("d-none");
+                form.reset();
+            } else {
+                form.classList.add("was-validated");
+                successMessage.classList.add("d-none");
+            }
+        });
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
