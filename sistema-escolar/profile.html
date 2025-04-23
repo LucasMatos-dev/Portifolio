@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt‑BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Perfil • Sistema Escolar</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="form-title">Perfil de Usuário</h1>
+        <div id="perfil"></div>
+    </div>
+
+    <script src="./assets/js/usuario.js"></script>
+    <script src="./assets/js/aluno.js"></script>
+    <script src="./assets/js/professor.js"></script>
+    <script>
+
+        const data = JSON.parse(localStorage.getItem("usuarioLogado"));
+        if (!data) {
+            window.location.href = "index.html";
+        } else {
+            let user;
+            if (data.tipo === "aluno") {
+                user = new Aluno(data.nome, data.email, data.senha, data.turma);
+            } else {
+                user = new Professor(data.nome, data.email, data.senha, data.materias);
+            }
+            user.exibirPerfil();
+        }
+    </script>
+</body>
+
+</html>
