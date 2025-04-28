@@ -1,0 +1,21 @@
+body {
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    background: #f7f7f7;
+    color: #333;
+}
+
+.card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 900px;
+    margin: auto;
+    box-shadow: 0 0 8px #0001;
+}
+
+.img-avatar {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+}

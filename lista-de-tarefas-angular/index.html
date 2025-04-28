@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de tarefas</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings:
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
+        }
+    </style>
+</head>
+
+<body ng-app="taskModule" ng-controller="TaskController">
+    <header id="header">
+        <section class="title">
+            <h1> Lista de tarefas</h1>
+            <button type="button" ng-click="toggleModal()">
+                <span class="add">
+                    <span class="material-symbols-outlined">
+                        add
+                    </span>
+                </span>
+                Adicionar uma tarefa
+            </button>
+        </section>
+        <section class="filters">
+            <label class="checkbox">
+                <input type="checkbox" ng-model="showCompletedOnly">Completas
+                <span></span>
+            </label>
+            <label class="checkbox">
+                <input type="checkbox" ng-model="incompletedOnly">Incompletas
+                <span></span>
+            </label>
+            <label class="checkbox">
+                <input type="checkbox" ng-model="todayOnly">Para hoje
+                <span></span>
+            </label>
+        </section>
+    </header>
+    <main id="content">
+        <article ng-repeat="task in filterdTasks() | orderBy: 'checked'" class="task"
+            ng-class="{'checked': task.checked}">
+            <label class="checkbox">
+                <input type="checkbox" ng-model="task.checked" ng-change="toggleCheckedTask()">
+                <span></span>
+                <h3 ng-bind="task.title"></h3>
+                <p class="date" ng-bind="task.date | date: 'dd/MM/yyyy'"></p>
+            </label>
+            <button>
+                <span class="material-symbols-outlined" ng-click="deleteTask(task)">delete</span>
+            </button>
+        </article>
+        <p ng-show="filterdTasks().length === 0" class="empty">Nenhuma tarefa cadastrada</p>
+    </main>
+    <aside ng-if="modalActive" class="modal-container">
+        <button class="giant-close-button" ng-click="toggleModal()"></button>
+        <div class="modal">
+            <button class="close" type="button" ng-click="toggleModal()"><span class="material-symbols-outlined">
+                    close
+                </span></button>
+            <h2>Adicionar tarefa</h2>
+            <form ng-submit="handleSubmitAddTask()" novalidate>
+                <label for="task-name">Nome da tarefa</label>
+                <input type="text" id="task-name" placeholder="Digite o nome da tarefa" ng-model="taskInput.title">
+                <label for="task-date">Data de entrega</label>
+                <input type="date" id="task-date" required ng-model="taskInput.date" required>
+                <button class="send" type="submit">Adicionar</button>
+            </form>
+        </div>
+    </aside>
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
