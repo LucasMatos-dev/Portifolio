@@ -1,14 +1,7 @@
 const app = angular.module('schoolApp', []);
 
-app.controller('AppController', function () {
-  const vm = this;
-
-  // Desafio 4
-  vm.mensagem = "Bem-vindo ao sistema de cadastro escolar";
-  vm.usuarioUnico = { nome: "João", tipo: "Aluno" };
-
-  // Deasfio 5
-  vm.usuarios = [
+app.factory('UsuarioService', function () {
+  const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [
     { nome: "João", tipo: "Aluno", dataCadastro: new Date("2024-07-01") },
     { nome: "Marina", tipo: "Professor", dataCadastro: new Date("2024-06-15") },
     { nome: "Carlos", tipo: "Aluno", dataCadastro: new Date("2024-05-10") },
@@ -21,11 +14,52 @@ app.controller('AppController', function () {
     { nome: "Lucas", tipo: "Aluno", dataCadastro: new Date("2023-10-09") }
   ];
 
-  vm.filtro = "";
-  vm.filtroTipo = "";
+  function salvarLocalStorage() {
+    localStorage.setItem("usuarios", JSON.stringify(usuarios));
+  }
+
+  return {
+    listar() {
+      return usuarios;
+    },
+    adicionar(usuario) {
+      usuario.dataCadastro = new Date();
+      usuarios.push(usuario);
+      salvarLocalStorage();
+    },
+    remover(index) {
+      usuarios.splice(index, 1);
+      salvarLocalStorage();
+    }
+  };
 });
 
-app.controller('ListaUsuariosController', function ($scope) {
+
+app.controller('AppController', function (UsuarioService) {
   const vm = this;
-  vm.usuarios = $scope.app.usuarios;
+
+  vm.mensagem = "Bem-vindo ao sistema de cadastro escolar";
+  vm.usuarioUnico = { nome: "João", tipo: "Aluno" };
+
+  vm.filtro = "";
+  vm.filtroTipo = "";
+
+  vm.usuarios = UsuarioService.listar();
+
+  vm.novoUsuario = {
+    nome: "",
+    tipo: "Aluno"
+  };
+
+  vm.adicionarUsuario = function () {
+    if (vm.novoUsuario.nome && vm.novoUsuario.tipo) {
+      UsuarioService.adicionar(angular.copy(vm.novoUsuario));
+      vm.novoUsuario.nome = "";
+      vm.novoUsuario.tipo = "Aluno";
+    }
+  };
+
+  vm.removerUsuario = function (index) {
+    UsuarioService.remover(index);
+  };
 });

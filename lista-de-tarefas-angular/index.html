@@ -44,17 +44,17 @@
                 <span></span>
             </label>
             <label class="checkbox">
-                <input type="checkbox" ng-model="incompletedOnly">Incompletas
+                <input type="checkbox" ng-model="showIncompletedOnly">Incompletas
                 <span></span>
             </label>
             <label class="checkbox">
-                <input type="checkbox" ng-model="todayOnly">Para hoje
+                <input type="checkbox" ng-model="showTodayOnly">Para hoje
                 <span></span>
             </label>
         </section>
     </header>
     <main id="content">
-        <article ng-repeat="task in filterdTasks() | orderBy: 'checked'" class="task"
+        <article ng-repeat="task in filteredTasks() | orderBy: 'checked'" class="task"
             ng-class="{'checked': task.checked}">
             <label class="checkbox">
                 <input type="checkbox" ng-model="task.checked" ng-change="toggleCheckedTask()">
@@ -66,7 +66,7 @@
                 <span class="material-symbols-outlined" ng-click="deleteTask(task)">delete</span>
             </button>
         </article>
-        <p ng-show="filterdTasks().length === 0" class="empty">Nenhuma tarefa cadastrada</p>
+        <p ng-show="filteredTasks().length === 0" class="empty">Nenhuma tarefa cadastrada</p>
     </main>
     <aside ng-if="modalActive" class="modal-container">
         <button class="giant-close-button" ng-click="toggleModal()"></button>
@@ -84,7 +84,12 @@
             </form>
         </div>
     </aside>
-    <script src="./assets/js/main.js"></script>
+
+    <script>
+        window.app = angular.module("taskModule", []);
+    </script>
+    <script src="./assets/js/tasks.service.js"></script>
+    <script src="./assets/js/tasks.controller.js"></script>
 </body>
 
 </html>
