@@ -1,34 +1,109 @@
 <!DOCTYPE html>
-<html lang="pt‑BR">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil • Sistema Escolar</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div class="container">
-        <h1 class="form-title">Perfil de Usuário</h1>
-        <div id="perfil"></div>
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <span>🎓 EdTech</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" class="active">Meu Perfil</a></li>
+                <li><a href="#">Minhas Notas</a></li>
+                <li><a href="#">Calendário</a></li>
+                <li><a href="#">Configurações</a></li>
+                <li><a href="index.html" onclick="localStorage.removeItem('usuarioLogado')">Sair</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="header">
+                <h2>Painel do Aluno</h2>
+                <div class="user-info">
+                    <span>Bem-vindo!</span>
+                    <div class="avatar">U</div>
+                </div>
+            </header>
+
+            <div id="perfil" class="profile-card">
+                <!-- Profile content will be injected here by JS -->
+            </div>
+        </main>
     </div>
 
     <script src="./assets/js/usuario.js"></script>
     <script src="./assets/js/aluno.js"></script>
     <script src="./assets/js/professor.js"></script>
     <script>
-
         const data = JSON.parse(localStorage.getItem("usuarioLogado"));
+
         if (!data) {
             window.location.href = "index.html";
         } else {
             let user;
+            // Re-instantiate based on type
             if (data.tipo === "aluno") {
                 user = new Aluno(data.nome, data.email, data.senha, data.turma);
             } else {
                 user = new Professor(data.nome, data.email, data.senha, data.materias);
             }
-            user.exibirPerfil();
+
+            // Custom display logic for the new layout
+            const perfilDiv = document.getElementById("perfil");
+            const avatarLetter = data.nome.charAt(0).toUpperCase();
+            document.querySelector('.avatar').innerText = avatarLetter;
+
+            let detailsHtml = '';
+            if (data.tipo === 'aluno') {
+                detailsHtml = `
+                    <div class="detail-item">
+                        <label>Turma</label>
+                        <p>${data.turma}</p>
+                    </div>
+                    <div class="detail-item">
+                        <label>Matrícula</label>
+                        <p>#${Math.floor(Math.random() * 10000)}</p>
+                    </div>
+                `;
+            } else {
+                detailsHtml = `
+                    <div class="detail-item">
+                        <label>Matérias</label>
+                        <p>${data.materias}</p>
+                    </div>
+                    <div class="detail-item">
+                        <label>Departamento</label>
+                        <p>Ensino Médio</p>
+                    </div>
+                `;
+            }
+
+            perfilDiv.innerHTML = `
+                <div class="profile-header">
+                    <div class="profile-avatar-large">${avatarLetter}</div>
+                    <div class="profile-info">
+                        <h2>${data.nome}</h2>
+                        <span class="role">${data.tipo}</span>
+                    </div>
+                </div>
+                <div class="details-grid">
+                    <div class="detail-item">
+                        <label>Email</label>
+                        <p>${data.email}</p>
+                    </div>
+                    ${detailsHtml}
+                </div>
+            `;
         }
     </script>
 </body>

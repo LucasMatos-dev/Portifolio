@@ -4,75 +4,133 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VRealize</title>
+    <title>VRealize | O Futuro da Realidade</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@400;600&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/vr.css">
 </head>
 
 <body>
-    <header id="post-header">
-        <h1>VRealize</h1>
-        <h2>Revolucionando a Experiência VR.</h2>
-        <button onclick="" class="menu-button">
-            <div></div>
-        </button>
+
+    <div class="vr-background" id="grid-bg"></div>
+
+    <header>
+        <div class="logo">VREALIZE</div>
+        <nav class="nav-links">
+            <a href="#">Início</a>
+            <a href="#features">Soluções</a>
+            <a href="#contato">Contato</a>
+            <a href="../index.html">Voltar ao Portfólio</a>
+        </nav>
     </header>
 
-    <aside class="menu">
-        <nav>
-            <b>Menu</b>
-            <ul>
-                <li><a href="#" class="active">Início</a></li>
-                <li><a href="#">Sobre Nós</a></li>
-                <li><a href="#">Pesquisas</a></li>
-                <li><a href="#">Soluções VR</a></li>
-                <li><a href="#">Contato</a></li>
-                <div class="portifolioBotao">
-                    <a href="../index.html">➦Portifólio</a>
-                </div>
-            </ul>
-        </nav>
-    </aside>
-
     <main>
+        <section class="hero-section">
+            <h1>EXPERIÊNCIA IMERSIVA</h1>
+            <p class="subtitle">Conectando o mundo físico ao digital através de soluções VR de ponta.</p>
+            <button id="warp-btn" class="back-btn">Explorar Universo</button>
+        </section>
 
-        <article class=intro>
-            <header>
-                <h2>Bem-vindo à VRealize!</h2>
-            </header>
-            <section>
+        <section id="features" class="features-grid">
+            <article class="vr-card">
+                <h3>Ambientes Virtuais</h3>
                 <p>
-                    Nossa missão é levar a Realidade Virtual ao próximo nível, oferecendo soluções imersivas para
-                    empresas e consumidores. Desenvolvemos projetos inovadores que integram hardware e software de
-                    última geração para criar experiências mais realistas e interativas.
+                    Criação de mundos digitais hiper-realistas para treinamento, educação e entretenimento.
+                    Sinta a presença como se estivesse lá.
                 </p>
-                <p>
-                    <strong>O que fazemos?</strong><br>
-                    - Criação de ambientes virtuais para educação e entretenimento.<br>
-                    - Desenvolvimento de aplicativos interativos que ampliam o engajamento do usuário.
-                </p>
-                <p>
-                    <strong>Visão de Futuro:</strong><br>
-                    Acreditamos que a Realidade Virtual será o principal vetor de inovação em diversas áreas, como
-                    saúde, indústria, educação e entretenimento. Por isso, investimos continuamente em pesquisa e
-                    desenvolvimento para manter nossa posição de vanguarda tecnológica.
-                </p>
-            </section>
-        </article>
+            </article>
 
-        <div id="posts-container"></div>
+            <article class="vr-card">
+                <h3>Interatividade Total</h3>
+                <p>
+                    Desenvolvemos interfaces que respondem ao toque, olhar e movimento.
+                    A barreira entre usuário e sistema deixa de existir.
+                </p>
+            </article>
+
+            <article class="vr-card">
+                <h3>Futuro da Indústria</h3>
+                <p>
+                    Soluções para indústria 4.0, medicina e arquitetura.
+                    Visualização de dados complexos em 3D para tomada de decisão.
+                </p>
+            </article>
+        </section>
+
+        <section id="contato" class="contact-section">
+            <h2>Conecte-se ao Futuro</h2>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/lucasmatos-dev/" target="_blank" class="social-icon">
+                    <img src="../assets/images/linkedin.png" alt="LinkedIn">
+                </a>
+                <a href="https://github.com/LucasMatos-dev" target="_blank" class="social-icon">
+                    <img src="../assets/images/github.png" alt="GitHub">
+                </a>
+            </div>
+        </section>
 
     </main>
 
     <footer>
-        <p>&copy; 2025 VRealize. Todos os direitos reservados.</p>
+        <p>&copy; 2025 VRealize Systems. Todos os direitos reservados.</p>
     </footer>
 
-    <script src="./assets/script/index.js"></script>
+    <div class="rocket-fleet" id="rocket-fleet"></div>
+
+    <script>
+        document.getElementById('warp-btn').addEventListener('click', function () {
+            const bg = document.getElementById('grid-bg');
+            const btn = this;
+            const fleet = document.getElementById('rocket-fleet');
+
+            // Activate Warp Speed
+            bg.classList.add('warp');
+            btn.innerText = "LANÇANDO FROTA...";
+
+            // Create Rockets
+            fleet.innerHTML = ''; // Clear previous
+            const rocketCount = 15;
+
+            for (let i = 0; i < rocketCount; i++) {
+                const rocket = document.createElement('div');
+                rocket.classList.add('rocket');
+                rocket.innerText = '🚀';
+
+                // Random Position and Size
+                const left = Math.random() * 100;
+                const size = 2 + Math.random() * 3; // 2rem to 5rem
+                const delay = Math.random() * 0.5; // Random start delay
+                const duration = 2 + Math.random() * 1.5; // Random speed
+
+                rocket.style.left = `${left}%`;
+                rocket.style.fontSize = `${size}rem`;
+                rocket.style.transition = `bottom ${duration}s ease-in ${delay}s, opacity 0.5s`;
+
+                fleet.appendChild(rocket);
+
+                // Trigger Launch
+                setTimeout(() => {
+                    rocket.classList.add('launch');
+                }, 50);
+            }
+
+            // Wait for effect then scroll
+            setTimeout(() => {
+                document.getElementById('features').scrollIntoView({ behavior: 'smooth' });
+                btn.innerText = "Explorar Universo";
+                bg.classList.remove('warp');
+
+                // Cleanup
+                setTimeout(() => {
+                    fleet.innerHTML = '';
+                }, 4000);
+
+            }, 2500);
+        });
+    </script>
 
 </body>
 

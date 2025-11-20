@@ -3,39 +3,154 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Automação de Luzes</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Home • Automação Completa</title>
+    <link rel="stylesheet" href="./assets/css/smart.css">
 </head>
 
-<body class="bg-light">
+<body>
 
-    <div class="container py-5">
-        <h1 class="text-center mb-4">Automação de Luzes</h1>
+    <a href="../index.html" class="back-link">← Voltar ao Portfólio</a>
 
-        <div class="row mb-4 justify-content-center">
-            <div class="col-auto">
-                <button class="btn btn-success" data-comodo="quarto" data-acao="ligar">Ligar Quarto</button>
-                <button class="btn btn-danger" data-comodo="quarto" data-acao="desligar">Desligar Quarto</button>
+    <div class="container">
+        <h1>🏠 Smart Home Dashboard</h1>
+
+        <!-- Stats Bar -->
+        <div class="stats-bar">
+            <div class="stat-item">
+                <span class="stat-icon">💡</span>
+                <span class="stat-value" id="lights-on">0</span>
+                <span class="stat-label">Luzes Acesas</span>
             </div>
-            <div class="col-auto">
-                <button class="btn btn-success" data-comodo="sala" data-acao="ligar">Ligar Sala</button>
-                <button class="btn btn-danger" data-comodo="sala" data-acao="desligar">Desligar Sala</button>
+            <div class="stat-item">
+                <span class="stat-icon">⚡</span>
+                <span class="stat-value" id="energy">0</span>
+                <span class="stat-label">Watts</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-icon">🌍</span>
+                <span class="stat-value" id="eco-mode">OFF</span>
+                <span class="stat-label">Modo Eco</span>
             </div>
         </div>
 
-        <div class="row mb-4">
-            <div class="col-12 text-center">
-                <div id="status" class="fw-bold"></div>
+        <!-- Quick Controls -->
+        <div class="control-panel">
+            <div class="control-header">Controles Rápidos</div>
+            <div class="quick-controls">
+                <button class="btn-quick" onclick="toggleAllLights(true)">
+                    <span class="btn-icon">🔆</span>
+                    Todas ON
+                </button>
+                <button class="btn-quick" onclick="toggleAllLights(false)">
+                    <span class="btn-icon">🌙</span>
+                    Todas OFF
+                </button>
+                <button class="btn-quick" onclick="setScene('cinema')">
+                    <span class="btn-icon">🎬</span>
+                    Cinema
+                </button>
+                <button class="btn-quick" onclick="setScene('party')">
+                    <span class="btn-icon">🎉</span>
+                    Festa
+                </button>
+                <button class="btn-quick" onclick="setScene('work')">
+                    <span class="btn-icon">💼</span>
+                    Trabalhar
+                </button>
+                <button class="btn-quick" onclick="setScene('relax')">
+                    <span class="btn-icon">🧘</span>
+                    Relaxar
+                </button>
             </div>
         </div>
 
-        <div class="row g-4">
-            <div class="col-md-6">
-                <div id="quarto" class="comodo">Quarto</div>
+        <!-- Brightness Control -->
+        <div class="brightness-panel">
+            <div class="brightness-header">
+                <span>🎚️ Intensidade Global</span>
+                <span id="brightness-value">100%</span>
             </div>
-            <div class="col-md-6">
-                <div id="sala" class="comodo">Sala</div>
+            <input type="range" id="global-brightness" min="0" max="100" value="100" class="brightness-slider">
+        </div>
+
+        <!-- Status -->
+        <div class="status-container">
+            <div id="status">Sistema pronto</div>
+        </div>
+
+        <!-- Rooms Grid -->
+        <div class="rooms-grid">
+            <div id="quarto" class="room-card light-off" data-room="quarto" data-watts="15">
+                <div class="room-brightness">
+                    <input type="range" min="0" max="100" value="100" class="room-slider" data-room="quarto">
+                </div>
+                <div class="room-icon">🛏️</div>
+                <div class="room-name">Quarto</div>
+                <div class="room-controls">
+                    <button class="btn-room-on" data-comodo="quarto" data-acao="ligar">ON</button>
+                    <button class="btn-room-off" data-comodo="quarto" data-acao="desligar">OFF</button>
+                </div>
+            </div>
+
+            <div id="sala" class="room-card light-off" data-room="sala" data-watts="20">
+                <div class="room-brightness">
+                    <input type="range" min="0" max="100" value="100" class="room-slider" data-room="sala">
+                </div>
+                <div class="room-icon">🛋️</div>
+                <div class="room-name">Sala</div>
+                <div class="room-controls">
+                    <button class="btn-room-on" data-comodo="sala" data-acao="ligar">ON</button>
+                    <button class="btn-room-off" data-comodo="sala" data-acao="desligar">OFF</button>
+                </div>
+            </div>
+
+            <div id="cozinha" class="room-card light-off" data-room="cozinha" data-watts="18">
+                <div class="room-brightness">
+                    <input type="range" min="0" max="100" value="100" class="room-slider" data-room="cozinha">
+                </div>
+                <div class="room-icon">🍳</div>
+                <div class="room-name">Cozinha</div>
+                <div class="room-controls">
+                    <button class="btn-room-on" data-comodo="cozinha" data-acao="ligar">ON</button>
+                    <button class="btn-room-off" data-comodo="cozinha" data-acao="desligar">OFF</button>
+                </div>
+            </div>
+
+            <div id="banheiro" class="room-card light-off" data-room="banheiro" data-watts="12">
+                <div class="room-brightness">
+                    <input type="range" min="0" max="100" value="100" class="room-slider" data-room="banheiro">
+                </div>
+                <div class="room-icon">🚿</div>
+                <div class="room-name">Banheiro</div>
+                <div class="room-controls">
+                    <button class="btn-room-on" data-comodo="banheiro" data-acao="ligar">ON</button>
+                    <button class="btn-room-off" data-comodo="banheiro" data-acao="desligar">OFF</button>
+                </div>
+            </div>
+
+            <div id="escritorio" class="room-card light-off" data-room="escritorio" data-watts="16">
+                <div class="room-brightness">
+                    <input type="range" min="0" max="100" value="100" class="room-slider" data-room="escritorio">
+                </div>
+                <div class="room-icon">💼</div>
+                <div class="room-name">Escritório</div>
+                <div class="room-controls">
+                    <button class="btn-room-on" data-comodo="escritorio" data-acao="ligar">ON</button>
+                    <button class="btn-room-off" data-comodo="escritorio" data-acao="desligar">OFF</button>
+                </div>
+            </div>
+
+            <div id="varanda" class="room-card light-off" data-room="varanda" data-watts="10">
+                <div class="room-brightness">
+                    <input type="range" min="0" max="100" value="100" class="room-slider" data-room="varanda">
+                </div>
+                <div class="room-icon">🌿</div>
+                <div class="room-name">Varanda</div>
+                <div class="room-controls">
+                    <button class="btn-room-on" data-comodo="varanda" data-acao="ligar">ON</button>
+                    <button class="btn-room-off" data-comodo="varanda" data-acao="desligar">OFF</button>
+                </div>
             </div>
         </div>
     </div>

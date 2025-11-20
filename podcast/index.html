@@ -1,43 +1,110 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Podcast</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CyberTech Podcast | O Futuro é Agora</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-        rel="stylesheet">
-  <link rel="stylesheet" href="./assets/css/style.css" />
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Roboto+Mono:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/cyber.css" />
 </head>
+
 <body>
 
-  <header class="cabecalho">
-    <nav class="links">
-      <a href="./index.html">Início</a>
-      <a href="../index.html">Portifólio</a>
-    </nav>
-    <img src="assets/images/CT.gif" alt="Logo" class="logo" />
-    <h1>Cybertech Podcast</h1>
-    <p class="descricao">
-      Apresentado por Anna Lara e Lucas de Matos, o Cybertech Podcast é o seu espaço para explorar as grandes questões do mundo da tecnologia. Vamos além das manchetes para discutir inovação, inteligência artificial, código aberto, privacidade digital, a influência das big techs e muito mais. Sem filtros, sem enrolação – apenas discussões profundas e provocativas sobre o presente e o futuro da tecnologia.
+  <nav class="nav-bar">
+    <a href="../index.html" class="nav-link">← Voltar ao Portfólio</a>
+  </nav>
+
+  <header>
+    <div class="logo-container">
+      <img src="assets/images/CT.gif" alt="CyberTech Logo" class="logo" />
+    </div>
+    <h1 class="glitch-text">CyberTech Podcast</h1>
+    <p class="tagline">
+      Tecnologia sem filtros. Inovação, IA, Código Aberto e o Futuro Digital.
     </p>
   </header>
 
-  <main class="conteudo">
-    <div class="layout-navegacao">
-      <div class="video">
-        <video controls class="video-podcast">
-          <source src="./assets/video/introCyberTech.mp4" type="video/mp4" />
-          Seu navegador não suporta vídeo HTML5.
-        </video>
+  <main class="container">
+    <h2 class="episodes-title">Transmissões Recentes_</h2>
+
+    <!-- Episódio 1 -->
+    <article class="episode-card">
+      <div class="episode-header">
+        <h3 class="episode-title">Universo Cyberpunk</h3>
+        <span class="episode-number">EP.01</span>
       </div>
-    </div>
+
+      <audio controls>
+        <source src="./assets/audio/audio1.MP3" type="audio/mp3" />
+        Seu navegador não suporta áudio HTML5.
+      </audio>
+
+      <div class="episode-content">
+        <div class="episode-text">
+          <p>
+            Mergulhamos em um universo <strong>Cyberpunk</strong> onde tecnologia e realidade se fundem. Discutimos a
+            integração humano-máquina e os perigos da rede.
+          </p>
+          <ul>
+            <li><strong>Integração Humano-Tecnologia:</strong> Chips avançados e ampliação da percepção.</li>
+            <li><strong>Realidade Virtual:</strong> Experiências imersivas e transferência de consciência.</li>
+            <li><strong>A Barreira Negra:</strong> Onde IAs perigosas são confinadas.</li>
+            <li><strong>Riscos:</strong> O perigo de ter sua mente hackeada.</li>
+          </ul>
+        </div>
+        <figure>
+          <!-- Placeholder image since the original was broken/external -->
+          <img src="https://preview.redd.it/zi1jekx409701.jpg?auto=webp&s=e079cfff912336cb2fb2075cb3eacee8f0954d1c" alt="Visão Cyberpunk"
+            class="episode-image" />
+          <figcaption>Visão Artística do Futuro</figcaption>
+        </figure>
+      </div>
+    </article>
+
+    <!-- Episódio 2 -->
+    <article class="episode-card">
+      <div class="episode-header">
+        <h3 class="episode-title">Código Aberto vs Big Techs</h3>
+        <span class="episode-number">EP.02</span>
+      </div>
+
+      <audio controls>
+        <source src="./assets/audio/audio2.MP3" type="audio/mp3" />
+        Seu navegador não suporta áudio HTML5.
+      </audio>
+
+      <div class="episode-content">
+        <div class="episode-text">
+          <p>
+            Uma discussão profunda sobre o controle da tecnologia. Quem detém o poder: a comunidade open source ou as
+            corporações gigantes?
+          </p>
+          <ul>
+            <li><strong>VS Code & Open Source:</strong> A estratégia das grandes empresas.</li>
+            <li><strong>Distopia Real:</strong> Como o Cyberpunk reflete nossa realidade atual.</li>
+            <li><strong>OpenAI vs Open Source:</strong> O caso DeepSeek e a democratização da IA.</li>
+            <li><strong>Lucro vs Evolução:</strong> A ética no desenvolvimento tecnológico.</li>
+          </ul>
+        </div>
+        <figure>
+          <img src="https://outraspalavras.net/wp-content/uploads/2025/01/4963518035986067042-1024x576.jpg"
+            alt="DeepSeek vs Big Techs" class="episode-image" />
+          <figcaption>A Batalha das IAs</figcaption>
+        </figure>
+      </div>
+    </article>
+
   </main>
 
-  <div class="botao-postagens">
-        <a href="./postagens.html">➦Postagens</a>
-    </div>
-  </div>
+  <footer>
+    <p>© 2025 CyberTech Podcast. Transmissão Encerrada.</p>
+  </footer>
 
 </body>
+
 </html>

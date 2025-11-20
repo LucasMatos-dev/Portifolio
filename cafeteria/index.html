@@ -2,223 +2,343 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cafeteria Lucas</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cafeteria Essencia | O Melhor Café</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/modern.css">
 </head>
 
 <body>
-    <header>
-        <img src="./assets/images/cafe_essencia.png" alt="Cafe Essencia." , width="300" />
-        <h1>Cafe Essencia</h1>
-        <!-- <h2>O melhor cafe da cidade!</h2> -->
-    </header>
+  <header>
+    <div class="container">
+      <img src="./assets/images/cafe_essencia.png" alt="Logo Cafe Essencia" />
+      <h1>Cafe Essencia</h1>
+      <p>☕ O melhor café da cidade, feito com paixão ☕</p>
+    </div>
+  </header>
 
-    <div class="cardapio">
-        <div class="linha">
-          <div class="bebidas">
-            <h2>Bebidas:</h2>
-            <ol type="1">
-              <li>
-                <strong>Café Expresso</strong>
-                <ul>
-                  <li>Café</li>
-                  <li>Água</li>
-                </ul>
-              </li>
-              <li>
-                <strong>Café com Leite</strong>
-                <ul>
-                  <li>Café</li>
-                  <li>Leite</li>
-                </ul>
-              </li>
-              <li>
-                <strong>Capuccino</strong>
-                <ul>
-                  <li>Café</li>
-                  <li>Leite vaporizado</li>
-                  <li>Espuma de leite</li>
-                  <li>Canela (opcional)</li>
-                </ul>
-              </li>
-              <li>
-                <strong>Suco de Laranja</strong>
-                <ul>
-                  <li>Laranja</li>
-                  <li>Água</li>
-                  <li>Açúcar (opcional)</li>
-                </ul>
-              </li>
-            </ol>
-          </div>
+  <main class="container">
 
-          <div class="salgados">
-            <h2>Salgados:</h2>
-            <ol type="1">
-              <li>
-                <strong>Coxinha</strong>
-                <ul>
-                  <li>Frango desfiado</li>
-                  <li>Massa de batata</li>
-                  <li>Farinha de trigo</li>
-                  <li>Óleo para fritar</li>
-                </ul>
-              </li>
-              <li>
-                <strong>Empada de Frango</strong>
-                <ul>
-                  <li>Massa de empada</li>
-                  <li>Frango desfiado</li>
-                  <li>Azeitonas</li>
-                  <li>Requeijão</li>
-                </ul>
-              </li>
-              <li>
-                <strong>Sanduíche Natural</strong>
-                <ul>
-                  <li>Pão integral</li>
-                  <li>Peito de peru</li>
-                  <li>Alface e tomate</li>
-                  <li>Cenoura ralada</li>
-                </ul>
-              </li>
-              <li>
-                <strong>Pão de Queijo</strong>
-                <ul>
-                  <li>Polvilho</li>
-                  <li>Queijo ralado</li>
-                  <li>Ovos</li>
-                  <li>Leite e óleo</li>
-                </ul>
-              </li>
-            </ol>
+    <!-- Promo Banner -->
+    <div class="promo-banner">
+      <h3>🎉 Promoção Especial!</h3>
+      <p>2ª Café + Doce por apenas R$ 12,90</p>
+    </div>
+
+    <!-- Menu Section -->
+    <section class="menu-section">
+      <h2 class="section-title">☕ Nosso Cardápio</h2>
+
+      <div class="menu-grid">
+        <!-- Bebidas -->
+        <div class="menu-category">
+          <h2>🥤 Bebidas</h2>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <strong>Café Expresso</strong>
+              <span class="price">R$ 5,90</span>
+            </div>
+            <ul>
+              <li>Café selecionado</li>
+              <li>Água filtrada</li>
+            </ul>
           </div>
-        
-    
-        <div class="doces">
-          <h2>Doces:</h2>
-          <ol type="1">
-            <li>
-              <strong>Brigadeiro</strong>
-              <ul>
-                <li>Leite condensado</li>
-                <li>Chocolate em pó</li>
-                <li>Manteiga</li>
-                <li>Granulado</li>
-              </ul>
-            </li>
-            <li>
-              <strong>Pudim</strong>
-              <ul>
-                <li>Leite condensado</li>
-                <li>Leite</li>
-                <li>Ovos</li>
-                <li>Açúcar para a calda</li>
-              </ul>
-            </li>
-            <li>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <strong>Café com Leite</strong>
+              <span class="price">R$ 7,50</span>
+            </div>
+            <ul>
+              <li>Café expresso</li>
+              <li>Leite vaporizado</li>
+            </ul>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <strong>Capuccino</strong>
+              <span class="price">R$ 9,90</span>
+            </div>
+            <ul>
+              <li>Café premium</li>
+              <li>Leite vaporizado</li>
+              <li>Espuma de leite cremosa</li>
+              <li>Canela (opcional)</li>
+            </ul>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <strong>Suco de Laranja</strong>
+              <span class="price">R$ 8,00</span>
+            </div>
+            <ul>
+              <li>Laranja natural</li>
+              <li>Gelo a gosto</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Salgados -->
+        <div class="menu-category">
+          <h2>🥐 Salgados</h2>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <strong>Coxinha</strong>
+              <span class="price">R$ 6,50</span>
+            </div>
+            <ul>
+              <li>Frango desfiado temperado</li>
+              <li>Massa de batata crocante</li>
+            </ul>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <strong>Empada de Frango</strong>
+              <span class="price">R$ 7,00</span>
+            </div>
+            <ul>
+              <li>Massa podre que derrete na boca</li>
+              <li>Recheio cremoso de frango</li>
+            </ul>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <strong>Sanduíche Natural</strong>
+              <span class="price">R$ 11,90</span>
+            </div>
+            <ul>
+              <li>Pão integral</li>
+              <li>Peito de peru e salada fresca</li>
+            </ul>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <strong>Pão de Queijo</strong>
+              <span class="price">R$ 5,50</span>
+            </div>
+            <ul>
+              <li>Queijo da canastra</li>
+              <li>Polvilho artesanal</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Doces -->
+        <div class="menu-category">
+          <h2>🍰 Doces</h2>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <strong>Brigadeiro Gourmet</strong>
+              <span class="price">R$ 4,00</span>
+            </div>
+            <ul>
+              <li>Chocolate belga</li>
+              <li>Granulado crocante</li>
+            </ul>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
+              <strong>Pudim de Leite</strong>
+              <span class="price">R$ 8,50</span>
+            </div>
+            <ul>
+              <li>Sem furinhos</li>
+              <li>Calda de caramelo</li>
+            </ul>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-header">
               <strong>Cookie de Chocolate</strong>
-              <ul>
-                <li>Farinha de trigo</li>
-                <li>Manteiga</li>
-                <li>Açúcar</li>
-                <li>Gotas de chocolate</li>
-              </ul>
-            </li>
-          </ol>
+              <span class="price">R$ 6,00</span>
+            </div>
+            <ul>
+              <li>Gotas de chocolate meio amargo</li>
+              <li>Massa amanteigada</li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-<div class="horario">
-  <h2>Horários de Funcionamento:</h2>
-  <table border="8px" cellspacing="0" cellpadding="8px">
-    <thead>
-        <tr>
-            <th>Horários</th>
-            <th>Segunda</th>
-            <th>Terça</th>
-            <th>Quarta</th>
-            <th>Quinta</th>
-            <th>Sexta</th>
-            <th>Sábado</th>
-            <th>Domingos e<br />Feriados</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th>Manhã</th>
-            <td>08:00<br /> 12:00</td>
-            <td rowspan="2"> Fechado</td>
-            <td>08:00<br /> 12:00</td>
-            <td>08:00<br /> 12:00</td>
-            <td>08:00<br /> 12:00</td>
-            <td>08:00<br /> 12:00</td>
-            <td rowspan="2"> 08:00 <br /> 12:00</td>
-        </tr>
-        <tr>
-            <th>Tarde</th>
-            <td>14:00 <br /> 18:00</td>
-            <td>14:00 <br /> 18:00</td>
-            <td>14:00 <br /> 18:00</td>
-            <td>14:00 <br /> 18:00</td>
-            <td>14:00 <br /> 18:00</td>
-        </tr>
-    </tbody>
-</table>
-</div>
+    </section>
 
-    <div class="contato">
-        <h1>Formulario de Contato:</h1>
-        <form>
-            <label>
-                <p>Digite o seu nome completo:</p>
-                <input type="text" name="nome" placeholder="Nome completo" required>
-            </label>
-            <br />
+    <!-- Gallery -->
+    <section class="gallery-section">
+      <h2 class="section-title">📸 Nosso Ambiente</h2>
+      <div class="gallery-grid">
+        <div class="gallery-item">☕</div>
+        <div class="gallery-item">🥐</div>
+        <div class="gallery-item">🍰</div>
+        <div class="gallery-item">🏪</div>
+      </div>
+    </section>
 
-            <label>
-                <p>Digite o seu email:</p>
-                <input type="email" name="email" placeholder="exemplo@gmail.com" required>
-            </label>
-            <br />
+    <!-- Testimonials -->
+    <section class="testimonials-section">
+      <h2 class="section-title">💬 O Que Dizem Nossos Clientes</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <p class="testimonial-text">
+            "O melhor café que já tomei! O ambiente é acolhedor e o atendimento é excepcional.
+            Virei cliente fiel!"
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">M</div>
+            <div class="author-info">
+              <strong>Maria Silva</strong>
+              <span>Cliente há 2 anos</span>
+            </div>
+          </div>
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+        </div>
 
-            <label>
-                <p>Digite seu telefone:</p>
-                <input type="tel" name="telefone" placeholder="(XX)XXXXX-XXXX">
-            </label>
-            <br />
+        <div class="testimonial-card">
+          <p class="testimonial-text">
+            "Os salgados são maravilhosos! Sempre fresquinhos e saborosos.
+            O pão de queijo é o melhor da cidade."
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">J</div>
+            <div class="author-info">
+              <strong>João Santos</strong>
+              <span>Cliente há 1 ano</span>
+            </div>
+          </div>
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+        </div>
 
-            <label>
-                <p>Digite o assunto do contato:</p>
-                <input type="text" name="Assunto" placeholder="Assunto do contato" required>
-            </label>
-            <br />
+        <div class="testimonial-card">
+          <p class="testimonial-text">
+            "Lugar perfeito para trabalhar ou relaxar. Wi-Fi rápido,
+            café delicioso e doces incríveis!"
+          </p>
+          <div class="testimonial-author">
+            <div class="author-avatar">A</div>
+            <div class="author-info">
+              <strong>Ana Oliveira</strong>
+              <span>Cliente há 6 meses</span>
+            </div>
+          </div>
+          <div class="rating">⭐⭐⭐⭐⭐</div>
+        </div>
+      </div>
+    </section>
 
-            <label>
-                <p>Escreva sua duvida:</p>
-                <textarea name="Texto" id="texto" placeholder="Motivo do contato" required></textarea>
-            </label>
-            <br />
+    <!-- Location -->
+    <section class="location-section">
+      <h2 class="section-title">📍 Onde Estamos</h2>
+      <div class="location-info">
+        <div class="info-item">
+          <span class="info-icon">🏪</span>
+          <div class="info-text">
+            <strong>Endereço</strong>
+            <p>Rua das Flores, 123 - Centro, São Paulo - SP</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <span class="info-icon">📞</span>
+          <div class="info-text">
+            <strong>Telefone</strong>
+            <p>(11) 98765-4321</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <span class="info-icon">📧</span>
+          <div class="info-text">
+            <strong>E-mail</strong>
+            <p>contato@cafeessencia.com.br</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <button type="submit">Enviar</button>
-            <button type="reset">Resetar Informações</button>
-        </form>
-    </div>
+    <!-- Hours -->
+    <section class="hours-section">
+      <h2 class="section-title">⏰ Horários de Funcionamento</h2>
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>Período</th>
+              <th>Segunda</th>
+              <th>Terça</th>
+              <th>Quarta</th>
+              <th>Quinta</th>
+              <th>Sexta</th>
+              <th>Sábado</th>
+              <th>Domingo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Manhã</strong></td>
+              <td>08:00 - 12:00</td>
+              <td>Fechado</td>
+              <td>08:00 - 12:00</td>
+              <td>08:00 - 12:00</td>
+              <td>08:00 - 12:00</td>
+              <td>08:00 - 12:00</td>
+              <td>08:00 - 12:00</td>
+            </tr>
+            <tr>
+              <td><strong>Tarde</strong></td>
+              <td>14:00 - 18:00</td>
+              <td>Fechado</td>
+              <td>14:00 - 18:00</td>
+              <td>14:00 - 18:00</td>
+              <td>14:00 - 18:00</td>
+              <td>14:00 - 18:00</td>
+              <td>14:00 - 18:00</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 
-    <div class="botaoPortifolio">
-        <a href="../index.html">Voltar para o <strong>Portifólio</strong></a>
-    </div>
+    <!-- Contact -->
+    <section class="contact-section">
+      <h2 class="section-title">✉️ Fale Conosco</h2>
+      <form>
+        <label>
+          <p>Nome Completo</p>
+          <input type="text" name="nome" placeholder="Seu nome" required>
+        </label>
 
-    <footer>
-        <p>&copy; 2025 Cafe Essencia. Todos os direitos reservados.</p>
-    </footer>
+        <label>
+          <p>E-mail</p>
+          <input type="email" name="email" placeholder="seu@email.com" required>
+        </label>
+
+        <label>
+          <p>Telefone</p>
+          <input type="tel" name="telefone" placeholder="(XX) 99999-9999">
+        </label>
+
+        <label>
+          <p>Assunto</p>
+          <input type="text" name="assunto" placeholder="Assunto" required>
+        </label>
+
+        <label>
+          <p>Mensagem</p>
+          <textarea name="mensagem" rows="4" placeholder="Como podemos ajudar?" required></textarea>
+        </label>
+
+        <div style="display: flex; gap: 1rem;">
+          <button type="submit" style="flex: 2;">Enviar Mensagem</button>
+          <button type="reset" style="flex: 1;">Limpar</button>
+        </div>
+      </form>
+    </section>
+
+    <a href="../index.html" class="back-link">← Voltar para o Portfólio</a>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Café Essencia. Todos os direitos reservados.</p>
+    <p>Feito com ❤️ e muito ☕</p>
+  </footer>
 
 </body>
 

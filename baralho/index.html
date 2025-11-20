@@ -1,32 +1,95 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="utf-8" />
-    <title>A de Paus</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-  </head>
-  <body>
-    <div class="card">
-      <div class="inner">
-        
-        <div class="frente">
-          <div class="canto esquerdo">
-            A<br>♣
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Casino Royale | Baralho Interativo</title>
+  <link rel="stylesheet" href="./assets/css/casino.css">
+</head>
+
+<body>
+
+  <a href="../index.html" class="back-link">← Voltar ao Portfólio</a>
+
+  <div class="table-container">
+    <div class="card-container" id="card">
+      <div class="card-inner">
+        <!-- Front (Face) -->
+        <div class="card-face card-front">
+          <div class="corner top-left">
+            <span class="value">A</span>
+            <span class="suit">♠</span>
           </div>
-          <div class="canto direito">
-            A<br>♣
-          </div>
-          <div class="centro">
-            ♣
+          <div class="center-suit">♠</div>
+          <div class="corner bottom-right">
+            <span class="value">A</span>
+            <span class="suit">♠</span>
           </div>
         </div>
-
-        
-        <div class="atras">
-          <img src="./assets/images/fundoCarta.jpg" alt="Fundo da Carta" />
-        </div>
-
+        <!-- Back -->
+        <div class="card-face card-back"></div>
       </div>
     </div>
-  </body>
+
+    <div class="controls">
+      <button class="btn-casino" onclick="flipCard()">Virar</button>
+      <button class="btn-casino" onclick="shuffleCard()">Embaralhar</button>
+    </div>
+  </div>
+
+  <script>
+    const suits = ['♠', '♥', '♣', '♦'];
+    const values = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
+
+    const cardElement = document.getElementById('card');
+    const valueElements = document.querySelectorAll('.value');
+    const suitElements = document.querySelectorAll('.suit');
+    const centerSuitElement = document.querySelector('.center-suit');
+    const cardFront = document.querySelector('.card-front');
+
+    let isFlipped = false;
+
+    function flipCard() {
+      isFlipped = !isFlipped;
+      if (isFlipped) {
+        cardElement.classList.add('flipped');
+      } else {
+        cardElement.classList.remove('flipped');
+      }
+    }
+
+    function shuffleCard() {
+      // Flip to back first if not already
+      if (!isFlipped) {
+        flipCard();
+      }
+
+      // Wait for flip, then change content and flip back
+      setTimeout(() => {
+        const randomSuit = suits[Math.floor(Math.random() * suits.length)];
+        const randomValue = values[Math.floor(Math.random() * values.length)];
+
+        // Update Text
+        valueElements.forEach(el => el.innerText = randomValue);
+        suitElements.forEach(el => el.innerText = randomSuit);
+        centerSuitElement.innerText = randomSuit;
+
+        // Update Color
+        if (randomSuit === '♥' || randomSuit === '♦') {
+          cardFront.classList.add('red');
+          cardFront.classList.remove('black');
+        } else {
+          cardFront.classList.add('black');
+          cardFront.classList.remove('red');
+        }
+
+        // Flip back to front
+        flipCard();
+      }, 600);
+    }
+  </script>
+
+</body>
+
 </html>

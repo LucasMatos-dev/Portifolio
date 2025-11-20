@@ -1,0 +1,176 @@
+:root {
+    --felt-green: #2e5c38;
+    --felt-texture: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.05) 0px, rgba(255, 255, 255, 0.05) 2px, transparent 2px, transparent 4px);
+    --card-width: 220px;
+    --card-height: 320px;
+    --gold: #d4af37;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--felt-green);
+    background-image: var(--felt-texture);
+    font-family: 'Courier New', Courier, monospace;
+    overflow: hidden;
+    margin: 0;
+}
+
+.table-container {
+    position: relative;
+    perspective: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.card-container {
+    width: var(--card-width);
+    height: var(--card-height);
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.card-container:hover {
+    transform: translateY(-10px) scale(1.05);
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform-style: preserve-3d;
+    box-shadow: var(--shadow);
+    border-radius: 15px;
+}
+
+.card-container.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-face {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border: 1px solid #ddd;
+}
+
+.card-front {
+    transform: rotateY(180deg);
+    background: white;
+    color: black;
+    font-size: 2rem;
+    z-index: 2;
+}
+
+.card-back {
+    background: radial-gradient(circle, #b22222 10%, #800000 90%);
+    background-image: repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.1) 0px, rgba(0, 0, 0, 0.1) 10px, transparent 10px, transparent 20px), radial-gradient(circle, #b22222 10%, #800000 90%);
+    border: 4px solid white;
+    z-index: 1;
+}
+
+.card-back::after {
+    content: '♠';
+    font-size: 5rem;
+    color: rgba(255, 255, 255, 0.2);
+}
+
+/* Card Details */
+.corner {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.top-left {
+    top: 15px;
+    left: 15px;
+}
+
+.bottom-right {
+    bottom: 15px;
+    right: 15px;
+    transform: rotate(180deg);
+}
+
+.center-suit {
+    font-size: 6rem;
+}
+
+.red {
+    color: #d40000;
+}
+
+.black {
+    color: #1a1a1a;
+}
+
+/* Controls */
+.controls {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.btn-casino {
+    background: linear-gradient(to bottom, #444, #222);
+    color: var(--gold);
+    border: 2px solid var(--gold);
+    padding: 10px 25px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.2s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.btn-casino:hover {
+    background: linear-gradient(to bottom, #555, #333);
+    transform: translateY(-2px);
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.6);
+    text-shadow: 0 0 5px var(--gold);
+}
+
+.btn-casino:active {
+    transform: translateY(1px);
+}
+
+.back-link {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.back-link:hover {
+    color: var(--gold);
+}

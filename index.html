@@ -4,223 +4,211 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meu Portifólio - Lucas de Matos Oliveira</title>
+  <title>Lucas de Matos Oliveira | Full Stack Developer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
-<nav class="navbar navbar-expand-md navbar-dark bg-dark">
-  <div class="container">
-    <a class="navbar-brand fw-bold" href="#">Lucas de Matos Oliveira</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link active" href="#sobre">Sobre</a></li>
-        <li class="nav-item"><a class="nav-link" href="#projetos">Projetos</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+<body>
 
-<main class="container py-5" id="sobre">
-  <div class="row align-items-center">
-    <div class="col-md-3 text-center text-md-start mb-3 mb-md-0">
-      <img src="./assets/images/eu.jpg" alt="Minha foto."
-        class="img-fluid rounded-circle border border-dark fotoPerfil" />
-    </div>
-    <div class="col-md-8 text-center text-md-start">
-      <h1 class="display-4 text-primary fw-medium">Meu nome é Lucas de Matos Oliveira</h1>
-      <h2 class="text-secondary">Sou um desenvolvedor Full Stack</h2>
-      <p class="fw-normal">
-        Adoro criar <span class="fw-bold">sites</span> e <span class="fw-bold">sistemas</span>
-        para a <i>internet</i>.
-        <br>
-        Tenho um grande interesse em
-        <span class="fw-bold">segurança da informação</span>, <span class="fw-bold">automação</span>
-        e <span class="fw-bold">experiência do usuário (UX)</span>.
-      </p>
-    </div>
-  </div>
-</main>
-
-<section class="container my-5" id="projetos">
-  <h2 class="fw-bold mb-4">Lista de Projetos:</h2>
-
-  <div class="d-flex flex-nowrap overflow-auto gap-3 pb-3 border-bottom">
-
-    <div class="card">
-      <img src="./assets/images/cafe_essencia.png" class="card-img-top card-img-css" alt="Cafeteria Essencia" />
-      <div class="card-body">
-        <h5 class="card-title text-primary">Cafeteria Essencia</h5>
-        <p class="card-text text-muted">Cafeteria básica feita em HTML.</p>
-        <a href="./cafeteria/index.html" class="btn btn-outline-primary btn-sm">Ver projeto</a>
+  <nav class="navbar navbar-expand-md fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Lucas<span class="text-primary">.dev</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projetos">Projetos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+        </ul>
       </div>
     </div>
+  </nav>
 
-    <div class="card">
-      <img src="./assets/images/podcast.gif" class="card-img-top card-img-css" alt="Podcast CyberTech" />
-      <div class="card-body">
-        <h5 class="card-title text-primary">Podcast CyberTech</h5>
-        <p class="card-text text-muted">Site de um podcast focado em tecnologia.</p>
-        <a href="./podcast/index.html" class="btn btn-outline-primary btn-sm">Ver projeto</a>
+  <main id="sobre">
+    <section class="hero-section container">
+      <div class="row align-items-center w-100">
+        <div class="col-lg-6 text-center text-lg-start order-2 order-lg-1">
+          <h2 class="text-secondary mb-3">Olá, eu sou</h2>
+          <h1 class="display-3 fw-bold mb-4">Lucas de Matos <br><span class="text-gradient">Full Stack Developer</span></h1>
+          <p class="lead text-secondary mb-5">
+            Especialista em transformar ideias em experiências digitais. Foco em <span class="text-white">segurança</span>, <span class="text-white">automação</span> e <span class="text-white">performance</span>.
+          </p>
+          <div class="d-flex gap-3 justify-content-center justify-content-lg-start">
+            <a href="#projetos" class="btn btn-custom">Ver Projetos</a>
+            <a href="#contato" class="btn btn-outline-light px-4 rounded-3">Contato</a>
+          </div>
+        </div>
+        <div class="col-lg-6 text-center order-1 order-lg-2 mb-5 mb-lg-0">
+          <div class="hero-img-container">
+            <img src="./assets/images/eu.jpg" alt="Lucas de Matos" class="hero-img" />
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <div class="card">
-      <img src="./assets/images/linktree.jpeg" class="card-img-top card-img-css" alt="Cartão de Visita" />
-      <div class="card-body">
-        <h5 class="card-title text-primary">Cartão de Visita</h5>
-        <p class="card-text text-muted">Estilo Linktree.</p>
-        <a href="./card/index.html" class="btn btn-outline-primary btn-sm">Ver projeto</a>
+    <section class="container py-5" id="projetos">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Meus Projetos</h2>
+        <p class="text-secondary mt-3">Uma seleção de trabalhos recentes e experimentos.</p>
       </div>
-    </div>
 
-    <div class="card">
-      <img src="./assets/images/site_alpar.jpeg" class="card-img-top card-img-css" alt="Site Alpar" />
-      <div class="card-body">
-        <h5 class="card-title text-primary">Site Alpar</h5>
-        <p class="card-text text-muted">Site criado usando bootstrap. Baseado no site da Alpar.</p>
-        <a href="./site-alpar-bootstrap/index.html" class="btn btn-outline-primary btn-sm">Ver projeto</a>
+      <div class="row g-4">
+        <!-- Cafeteria -->
+        <div class="col-md-6 col-lg-4">
+          <div class="project-card">
+            <div class="card-img-wrapper">
+              <img src="./assets/images/cafe_essencia.png" class="card-img-top" alt="Cafeteria Essencia" />
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Cafeteria Essencia</h5>
+              <p class="card-text">Landing page moderna para uma cafeteria, com cardápio interativo e design responsivo.</p>
+              <a href="./cafeteria/index.html" class="btn btn-custom w-100">Ver Projeto</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Podcast -->
+        <div class="col-md-6 col-lg-4">
+          <div class="project-card">
+            <div class="card-img-wrapper">
+              <img src="./assets/images/podcast.gif" class="card-img-top" alt="Podcast CyberTech" />
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Podcast CyberTech</h5>
+              <p class="card-text">Portal de conteúdo para podcast de tecnologia, focado em acessibilidade e SEO.</p>
+              <a href="./podcast/index.html" class="btn btn-custom w-100">Ver Projeto</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Linktree -->
+        <div class="col-md-6 col-lg-4">
+          <div class="project-card">
+            <div class="card-img-wrapper">
+              <img src="./assets/images/linktree.jpeg" class="card-img-top" alt="Cartão de Visita" />
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Cartão Digital</h5>
+              <p class="card-text">Agregador de links estilo Linktree, otimizado para mobile e compartilhamento rápido.</p>
+              <a href="./card/index.html" class="btn btn-custom w-100">Ver Projeto</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Site Alpar -->
+        <div class="col-md-6 col-lg-4">
+          <div class="project-card">
+            <div class="card-img-wrapper">
+              <img src="./assets/images/site_alpar.jpeg" class="card-img-top" alt="Site Alpar" />
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Clone Alpar</h5>
+              <p class="card-text">Recriação fiel do site corporativo da Alpar utilizando Bootstrap para layout grid.</p>
+              <a href="./site-alpar-bootstrap/index.html" class="btn btn-custom w-100">Ver Projeto</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- VRealize CSS -->
+        <div class="col-md-6 col-lg-4">
+          <div class="project-card">
+            <div class="card-img-wrapper">
+              <img src="./assets/images/vr_realize.jpeg" class="card-img-top" alt="Site VRealize" />
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">VRealize CSS</h5>
+              <p class="card-text">Demonstração de técnicas avançadas de CSS puro sem dependência de frameworks.</p>
+              <a href="./vrealize-css/index.html" class="btn btn-custom w-100">Ver Projeto</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sistema Escolar -->
+        <div class="col-md-6 col-lg-4">
+          <div class="project-card">
+            <div class="card-img-wrapper">
+              <img src="./assets/images/sistema-escola.jpeg" class="card-img-top" alt="Sistema Escolar" />
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Sistema Escolar</h5>
+              <p class="card-text">Aplicação de gestão escolar com autenticação e dashboard. (JS/CSS)</p>
+              <a href="./sistema-escolar/index.html" class="btn btn-custom w-100">Ver Projeto</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Automação Luzes -->
+        <div class="col-md-6 col-lg-4">
+          <div class="project-card">
+            <div class="card-img-wrapper">
+              <img src="./assets/images/automacao-luzes.jpeg" class="card-img-top" alt="Automação" />
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Automação IoT</h5>
+              <p class="card-text">Interface de controle para automação residencial de luzes.</p>
+              <a href="./automacao-luzes/index.html" class="btn btn-custom w-100">Ver Projeto</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gerenciamento Usuários -->
+        <div class="col-md-6 col-lg-4">
+          <div class="project-card">
+            <div class="card-img-wrapper">
+              <img src="./assets/images/gerenciamento-usuarios-escola.jpeg" class="card-img-top" alt="Gerenciamento" />
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">User Management</h5>
+              <p class="card-text">CRUD completo de usuários desenvolvido com Angular e Bootstrap.</p>
+              <a href="./gerenciamento-usuarios-escola/index.html" class="btn btn-custom w-100">Ver Projeto</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Previsão Tempo -->
+        <div class="col-md-6 col-lg-4">
+          <div class="project-card">
+            <div class="card-img-wrapper">
+              <img src="./assets/images/previsao-do-tempo-angular.jpeg" class="card-img-top" alt="Previsão Tempo" />
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Weather App</h5>
+              <p class="card-text">Aplicação de previsão do tempo consumindo API externa com Angular.</p>
+              <a href="./previsao-do-tempo-angular/index.html" class="btn btn-custom w-100">Ver Projeto</a>
+            </div>
+          </div>
+        </div>
+
       </div>
-    </div>
+    </section>
 
-    <div class="card">
-      <img src="./assets/images/vr_realize.jpeg" class="card-img-top card-img-css" alt="Site VRealize-CSS" />
-      <div class="card-body">
-        <h5 class="card-title text-primary">Site VRealize-CSS</h5>
-        <p class="card-text text-muted">Site feito usando CSS.</p>
-        <a href="./vrealize-css/index.html" class="btn btn-outline-primary btn-sm">Ver projeto</a>
+    <section class="container text-center py-5 mb-5" id="contato">
+      <h2 class="section-title mb-5">Vamos Conversar?</h2>
+      <div class="d-flex justify-content-center">
+        <a href="https://www.linkedin.com/in/lucasmatos-dev/" target="_blank" class="social-link">
+          <img src="./assets/images/linkedin.png" alt="Linkedin">
+        </a>
+        <a href="https://github.com/LucasMatos-dev" target="_blank" class="social-link">
+          <img src="./assets/images/github.png" alt="Github">
+        </a>
       </div>
+    </section>
+  </main>
+
+  <footer class="py-4 text-center">
+    <div class="container">
+      <p class="mb-0">© 2025 Lucas de Matos Oliveira. Desenvolvido com <span class="text-danger">❤</span> e muito código.</p>
     </div>
+  </footer>
 
-    <div class="card">
-      <img src="./assets/images/vr_realize_tabela.jpeg" class="card-img-top card-img-css" alt="Site VRealize-Tabelas" />
-      <div class="card-body">
-        <h5 class="card-title text-primary">Site VRealize-Tabelas</h5>
-        <p class="card-text text-muted">Site feito usando tabelas em HTML.</p>
-        <a href="./vrealize-table/index.html" class="btn btn-outline-primary btn-sm">Ver projeto</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="./assets/images/carta_baralho.jpeg" class="card-img-top card-img-css" alt="Carta de Baralho" />
-      <div class="card-body">
-        <h5 class="card-title text-primary">Carta de Baralho</h5>
-        <p class="card-text text-muted">Um A's que vira ao passar o mouse.</p>
-        <a href="./baralho/index.html" class="btn btn-outline-primary btn-sm">Ver projeto</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="./assets/images/portifolio_orginal.jpeg" class="card-img-top card-img-css" alt="Portifolio Original" />
-      <div class="card-body">
-        <h5 class="card-title text-primary">Portifolio Original</h5>
-        <p class="card-text text-muted">Feito usando HTML e CSS.</p>
-        <a href="./portifolio-original/index.html" class="btn btn-outline-primary btn-sm">Ver projeto</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="./assets/images/tabela-bootstrap.jpeg" class="card-img-top card-img-css" alt="Carta de Baralho" />
-      <div class="card-body">
-        <h5 class="card-title text-primary">Tabelas</h5>
-        <p class="card-text text-muted">Feito usando Bootstrap.</p>
-        <a href="./tabela-bootstrap/index.html" class="btn btn-outline-primary btn-sm">Ver projeto</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="./assets/images/painel-cards-bootstrap.jpeg" class="card-img-top card-img-css" alt="Painel Cards" />
-      <div class="card-body">
-        <h5 class="card-title text-primary">Painel Cards</h5>
-        <p class="card-text text-muted">Feito usando Bootstrap.</p>
-        <a href="./painel-cards-bootstrap/index.html" class="btn btn-outline-primary btn-sm">Ver projeto</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="./assets/images/sistema-escola.jpeg" class="card-img-top card-img-css" alt="Painel Cards" />
-      <div class="card-body">
-        <h5 class="card-title text-primary">Sistema Escolar</h5>
-        <p class="card-text text-muted">Feito usando JS e CSS. Credenciais de acesso no "auth.js" </p>
-        <a href="./sistema-escolar/index.html" class="btn btn-outline-primary btn-sm">Ver projeto</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="./assets/images/automacao-luzes.jpeg" class="card-img-top card-img-css" alt="Automação de Luzes" />
-      <div class="card-body">
-        <h5 class="card-title text-primary">Automação de Luzes</h5>
-        <p class="card-text text-muted">Feito usando JS e CSS e Bootstrap." </p>
-        <a href="./automacao-luzes/index.html" class="btn btn-outline-primary btn-sm">Ver projeto</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="./assets/images/gerenciamento-usuarios-escola.jpeg" class="card-img-top card-img-css"
-        alt="Gerenciamento Usuários Escola" />
-      <div class="card-body">
-        <h5 class="card-title text-primary">Gerenciamento Usuários Escola</h5>
-        <p class="card-text text-muted">Feito usando JS, CSS, Bootstrap e Angular." </p>
-        <a href="./gerenciamento-usuarios-escola/index.html" class="btn btn-outline-primary btn-sm">Ver projeto</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="./assets/images/lista-de-tarefas-angular.jpeg" class="card-img-top card-img-css"
-        alt="Lista de tarefas Angular" />
-      <div class="card-body">
-        <h5 class="card-title text-primary">Lista de Tarefas-Angular</h5>
-        <p class="card-text text-muted">Feito usando JS, CSS e Angular." </p>
-        <a href="./lista-de-tarefas-angular/index.html" class="btn btn-outline-primary btn-sm">Ver projeto</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="./assets/images/previsao-do-tempo-angular.jpeg" class="card-img-top card-img-css"
-        alt="Previsão do Tempo-Angular" />
-      <div class="card-body">
-        <h5 class="card-title text-primary">Previsão do Tempo-Angular</h5>
-        <p class="card-text text-muted">Feito usando JS, CSS e Angular." </p>
-        <a href="./previsao-do-tempo-angular/index.html" class="btn btn-outline-primary btn-sm">Ver projeto</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="./assets/images/validacao-regex.jpeg" class="card-img-top card-img-css" alt="Validação com Regex" />
-      <div class="card-body">
-        <h5 class="card-title text-primary">Validação com Regex</h5>
-        <p class="card-text text-muted">Feito usando JS, CSS e Bootstrap." </p>
-        <a href="./validacao-regex/index.html" class="btn btn-outline-primary btn-sm">Ver projeto</a>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<section class="container text-center mb-5 redeSocial" id="contato">
-  <h3 class="fw-bold mb-4">Entre em contato:</h3>
-  <a href="https://www.linkedin.com/in/lucasmatos-dev/" target="_blank" class="mx-2">
-    <img src="./assets/images/linkedin.png" alt="Linkedin">
-  </a>
-  <a href="https://github.com/LucasMatos-dev" target="_blank" class="mx-2">
-    <img src="./assets/images/github.png" alt="Github">
-  </a>
-</section>
-
-<footer class="bg-dark text-white text-center py-3">
-  <p class="mb-0">© 2025 Lucas de Matos Oliveira. Todos os direitos reservados.</p>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js">
-</script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
